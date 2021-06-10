@@ -12,35 +12,6 @@ t1.from('.box-1 > .text', {
 });
 텍스트 하나씩 나타나는 애니메이션 (GSAP) */
 
-/* ColorPallete */
-var ColorPalleteIsOpened = false;
-document.getElementById('btn-color').addEventListener('click', function () {
-  if( ColorPalleteIsOpened == false ){
-    document.getElementById('color-pallete').style.transform = 'translateX(0)';
-    document.getElementById('btn-color').style.transform = 'translateX(-50px)';
-    ColorPalleteIsOpened = true;
-    return;
-  }
-  if( ColorPalleteIsOpened == true ){
-    document.getElementById('color-pallete').style.transform = 'translateX(50px)';
-    document.getElementById('btn-color').style.transform = 'translateX(0)';
-    ColorPalleteIsOpened = false;
-    return;
-  }
-})
-
-window.addEventListener('click', function ($event) {
-  if($event.target.id != 'btn-color' && $event.target.id != 'btn-color-icon'){
-    if( ColorPalleteIsOpened == true ){
-      document.getElementById('color-pallete').style.transform = 'translateX(50px)';
-      document.getElementById('btn-color').style.transform = 'translateX(0)';
-      ColorPalleteIsOpened = false;
-      return;
-    }
-  }
-})
-/* ColorPallete */
-
 /* 글자 타이핑되는 애니메이션 (배열에 있는 텍스트가 순서대로 타이핑되고 지워짐) 
 let i = 0,
   j = 0;
@@ -100,31 +71,54 @@ gsap.from('.section-2 > div > .box-2', {
 });
 /* GSAP ScrollTrigger (스크롤로 특정 태그 위치로 이동 시 요소 나타나게 하기) */
 
+/* ColorPallete 열고 닫기 */
+var ColorPalleteIsOpened = false;
+document.getElementById('btn-color').addEventListener('click', function () {
+  if (ColorPalleteIsOpened == false) {
+    document.getElementById('color-pallete').style.transform = 'translateX(0)';
+    document.getElementById('btn-color').style.transform = 'translateX(-50px)';
+    ColorPalleteIsOpened = true;
+    return;
+  }
+  if (ColorPalleteIsOpened == true) {
+    document.getElementById('color-pallete').style.transform = 'translateX(50px)';
+    document.getElementById('btn-color').style.transform = 'translateX(0)';
+    ColorPalleteIsOpened = false;
+    return;
+  }
+})
+
+window.addEventListener('click', function ($event) {
+  if ($event.target.id != 'btn-color' && $event.target.id != 'btn-color-icon' &&
+    $event.target.id != 'color-pallete' && $event.target.id != 'colorbox-yellow' &&
+    $event.target.id != 'colorbox-orange') {
+    if (ColorPalleteIsOpened == true) {
+      document.getElementById('color-pallete').style.transform = 'translateX(50px)';
+      document.getElementById('btn-color').style.transform = 'translateX(0)';
+      ColorPalleteIsOpened = false;
+      return;
+    }
+  }
+})
+/* ColorPallete 열고 닫기 */
+
 /* Theme Color 일괄적으로 변경하기 */
 document.getElementById('colorbox-yellow').addEventListener('click', function () {
-  var classList1 = document.getElementsByClassName('bg-theme');
-  for (var i = 0; i < classList1.length; i++) {
-    var classElement1 = classList1.item(i);
-    classElement1.style.backgroundColor = 'var(--bg-yellow)'
-  }
+  document.documentElement.style.setProperty('--bg-theme', 'rgb(252,244,172)'); // CSS의 변수값 설정
 })
 
 document.getElementById('colorbox-orange').addEventListener('click', function () {
-  var classList1 = document.getElementsByClassName('bg-theme');
-  for (var i = 0; i < classList1.length; i++) {
-    var classElement1 = classList1.item(i);
-    classElement1.style.backgroundColor = 'var(--bg-orange)'
-  }
+  document.documentElement.style.setProperty('--bg-theme', '#f8875a'); // CSS의 변수값 설정
 })
 /* Theme Color 일괄적으로 변경하기 */
 
-/* ScrollTop Button 
-gsap.from( '#scrollTop' , {
+/* ScrollTop Button */
+gsap.from('#scrollTop', {
   scrollTrigger: {
-    trigger: ".section-2",
-    markers: true,
-    start: "top 100%-=100",
-    end: "bottom 100%-=200",
+    trigger: "#scrollTopPoint",
+    // markers: true, 
+    start: "top 100%",
+    end: "bottom 100%",
     scrub: true
   },
   y: 100,

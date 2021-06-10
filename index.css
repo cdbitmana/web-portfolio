@@ -1,9 +1,16 @@
 /* 변수 선언 */
 :root {
+  --bg-theme: var(--bg-yellow);
   --bg-yellow: rgb(252,244,172);
   --bg-orange: #f8875a;
 }
 /* 변수 선언 */
+
+/* 텍스트 셀렉트 박스 */
+::selection {
+  background-color: var(--bg-theme);
+}
+/* 텍스트 셀렉트 박스 */
 
 html {
   scroll-behavior: smooth;
@@ -11,16 +18,27 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
+/* 라이브러리 */
 .btn {
   cursor: pointer;
 }
 
-.bg-theme {
-  background-color: var(--bg-yellow);
+.font-1 {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px;
 }
 
+.bg-theme {
+  background-color: var(--bg-theme);
+}
+/* 라이브러리 */
+
+/* 테마색 메뉴 버튼 */
 #btn-color {
   position: fixed;
   display: flex;
@@ -31,14 +49,15 @@ body {
   top: 10%;
   width: 40px;
   height: 40px;
-  background-color: var(--bg-yellow);
   border-top: 2px solid rgba(37, 37, 50, 0.78);
   border-left: 2px solid rgba(37, 37, 50, 0.78);
   border-bottom: 2px solid rgba(37, 37, 50, 0.78);
   border-radius:10px 0 0 10px;
-  transition: transform 1s ease;
+  transition: transform .7s ease;
 }
+/* 테마색 메뉴 버튼 */
 
+/* 테마색 팔레트 */
 #color-pallete {
   position: fixed;
   display: flex;
@@ -52,9 +71,11 @@ body {
   height: 250px;
   background-color:rgba(37, 37, 50, 0.78);
   transform: translateX(50px);
-  transition: all 1s ease;
+  transition: transform .7s ease;
 }
+/* 테마색 팔레트 */
 
+/* 테마색 팔레트 색상 */
 .colorbox {
   width: 30px;
   height: 30px;
@@ -67,26 +88,7 @@ body {
 #colorbox-orange {
   background-color: var(--bg-orange);
 }
-
-#section-1 {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#section-1 > div {
-  min-height: 80vh;
-  width: 80%;
-  background-color: rgb(252,244,172);
-  font-size: 4rem;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-color: black;
-  -webkit-text-stroke-width: 1px;
-}
-
-
+/* 테마색 팔레트 색상 */
 
 /* 키보드 커서 깜빡임 애니메이션 */
 @keyframes cursorEffect {
@@ -114,7 +116,62 @@ body {
 }
 /* 키보드 커서 깜빡임 애니메이션 */
 
+/* 스크롤 탑 버튼 */
 #scrollTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid gray;
 }
+
+#scrollTopPoint {
+  position: absolute;
+  top: 110vh;
+  width: 1px;
+  height: 100px;
+}
+/* 스크롤 탑 버튼 */
+
+/* section-1 */
+#section-1 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-1 > div {
+  min-height: 80vh;
+  width: 80%;
+}
+
+#section-1 > div > div {
+  margin-top: 10%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#txt-nameKor {
+  font-size: 3rem;
+}
+
+#txt-nameEng {
+  font-size: 1.5rem;
+  color: gray;
+}
+/* section-1 */
+
+/* section-2 */
+#section-2 {
+  width: 500px;
+  height: 500px;
+  margin-top: 500px;
+  margin-bottom: 500px;
+}
+/* section-2 */
+
