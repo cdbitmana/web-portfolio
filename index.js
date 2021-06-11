@@ -12,15 +12,15 @@ t1.from('.box-1 > .text', {
 });
 텍스트 하나씩 나타나는 애니메이션 (GSAP) */
 
-/* 글자 타이핑되는 애니메이션 (배열에 있는 텍스트가 순서대로 타이핑되고 지워짐) 
+/* 글자 타이핑되는 애니메이션 (배열에 있는 텍스트가 순서대로 타이핑되고 지워짐) */
 let i = 0,
   j = 0;
 
-const textArray = ["HTML", "CSS", "Javascript"],
+const textArray = ["DEVELOPER", "WEB", "APPLICATION"],
   Typingspeed = 100, // 이 수치를 변경하면 타이핑되는 속도가 변경됨
   deleteSpeed = 50, // 이 수치를 변경하면 지워지는 속도가 변경됨
   repeatSpped = 3000, // 이 수치를 변경하면 타이핑 완료되고 다시 지워기지기까지의 시간이 변경됨
-  target = document.getElementById("type");
+  target = document.getElementById("typing");
 
 function txtnum() {
   j == textArray.length - 1 ?

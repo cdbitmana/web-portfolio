@@ -15,45 +15,79 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <!-- GSAP ScrollTriger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <!-- GOOGLE FONT SAIRA -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body id="top">
 
-  <!-- 테마색 메뉴 버튼 -->
-  <div id="btn-color" class="bg-theme btn"><i id="btn-color-icon" class="fas fa-palette"></i></div>
+  <!-- 헤더 -->
+  <header class="fixed">
+    <div class="container flex">
+      <a href="">
+        <div class="font-bold">
+          <span class="color-theme">이</span><span class="color-white">명학</span>
+        </div>
+        <span class="color-gray">DEVELOPER</span>
+      </a>
+      <div class="btn-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </header>
 
-  <!-- 테마색 팔레트 -->
-  <div id="color-pallete">
-    <div id="colorbox-yellow" class="colorbox btn"></div>
-    <div id="colorbox-orange" class="colorbox btn"></div>
+  <!-- left-info -->
+  <div id="left-info" class="fixed color-gray flex ai-c">
+    <div class="txt">
+      <span class="font-bold">Follow Me</span>
+    </div>
+    <div class="bg-line"></div>
+    <div class="sns">
+      <a href="" class="color-gray"><i class="fab fa-instagram"></i></a>
+      <a href="" class="color-gray"><i class="fab fa-linkedin-in"></i></a>
+      <a href="" class="color-gray"><i class="fab fa-facebook-f"></i></a>
+    </div>
   </div>
-
-  <!-- 스크롤탑 버튼 -->
-  <a href="#top">
-    <div id="scrollTop" class="bg-theme"><i class="fas fa-chevron-up"></i></div>
-  </a>
-
-  <!-- 스크롤탑 버튼 나오는 기준점 -->
-  <div id="scrollTopPoint"></div>
 
   <!-- section-1 -->
   <section id="section-1">
-    <div id="container-1" class="bg-theme">
-      <div>
-        <div>
-          <span id="txt-nameKor" class="font-1">이명학</span>
+    <div class="container relative">
+      <div class="txt-group absolute">
+        <div class="txt-1 relative">
+          <div></div>
+          <span class="color-gray">I Am Lee Myoung Hak</span>
         </div>
-        <div>
-          <span id="txt-nameEng">Lee Myoung Hak</span>
+        <div id="typing" class="txt-2 font-bold font-reverse">
+        </div>
+        <div class="txt-3 flex">
+          <div class="flex ai-c">
+            <div>
+              <div class="color-gray">Morocco</div>
+              <div>Rabat - Casablanca</div>
+            </div>
+          </div>
+          <div class="flex ai-c">
+            <div>
+              <div class="color-gray">USA</div>
+              <div>California - Detorit</div>
+            </div>
+          </div>
+          <div class="flex ai-c">
+            <div>
+              <div class="color-gray">Canada</div>
+              <div>Delta - Greenwood</div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="btn-mouse absolute">
+       <a href=""><div class="mouse absolute"></div></a>
+      </div>
     </div>
-  </section>
-
-  <!-- section-2 -->
-  <section id="section-2" class="bg-theme">
-
   </section>
 
 </body>
