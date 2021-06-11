@@ -24,7 +24,7 @@
 <body id="top">
 
   <!-- 헤더 -->
-  <header class="fixed">
+  <header id="header" class="fixed">
     <div class="container flex">
       <a href="">
         <div class="font-bold">
@@ -32,92 +32,134 @@
         </div>
         <span class="color-gray">DEVELOPER</span>
       </a>
-      <div class="btn-menu">
+      <div id="btn-menu" class="btn-menu">
         <div></div>
         <div></div>
         <div></div>
       </div>
+      <div id="btn-menu-close" class="btn-menu-close flex jc-c ai-c"><i class="fas fa-times"></i></div>
     </div>
   </header>
 
-  <!-- left-info -->
-  <div id="left-info" class="fixed color-gray flex ai-c">
-    <div class="txt">
-      <span class="font-bold">Follow Me</span>
-    </div>
-    <div class="bg-line"></div>
-    <div class="sns">
-      <a href="" class="color-gray"><i class="fab fa-instagram"></i></a>
-      <a href="" class="color-gray"><i class="fab fa-linkedin-in"></i></a>
-      <a href="" class="color-gray"><i class="fab fa-facebook-f"></i></a>
-    </div>
-  </div>
+  <!-- menu-effect -->
+  <div id="menu-effect-open" class="fixed"></div>
+  <div id="menu-effect-close" class="fixed"></div>
 
-  <!-- side-menu -->
-  <div id="btn-side-menu" class="btn-side-menu fixed flex jc-c ai-c color-white click-check">
-    <i class="far fa-life-ring click-check"></i>
-  </div>
-
-  <div id="side-menu" class="side-menu fixed click-check">
-    <div class="click-check">
-      <span class="color-white font-bold click-check">Theme Color</span>
-      <ul class="click-check">
-        <li id="btn-bg-red" class="click-check"></li>
-        <li id="btn-bg-orange" class="click-check"></li>
-        <li id="btn-bg-brown" class="click-check"></li>
-        <li id="btn-bg-green"class="click-check"></li>
-        <li id="btn-bg-blue" class="click-check"></li>
-        <li id="btn-bg-purple"class="click-check"></li>
-        <li id="btn-bg-yellow" class="click-check"></li>
-        <li id="btn-bg-rose" class="click-check"></li>
-      </ul>
-    </div>
-    <div class="click-check">
-      <span class="color-white font-bold click-check">Menu</span>
-      <ul class="flex click-check">
-        <li class="flex jc-c ai-c click-check"><span>Overlay</span></li>
-        <li class="flex jc-c ai-c click-check"><span>Right</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- section-1 -->
-  <section id="section-1">
-    <div class="container relative">
-      <div class="txt-group absolute">
-        <div class="txt-1 relative">
-          <div></div>
-          <span class="color-gray">I Am Lee Myoung Hak</span>
-        </div>
-        <div id="typing" class="txt-2 font-bold font-reverse">
-        </div>
-        <div class="txt-3 flex">
-          <div class="flex ai-c">
-            <div>
-              <div class="color-gray">Morocco</div>
-              <div>Rabat - Casablanca</div>
-            </div>
-          </div>
-          <div class="flex ai-c">
-            <div>
-              <div class="color-gray">USA</div>
-              <div>California - Detorit</div>
-            </div>
-          </div>
-          <div class="flex ai-c">
-            <div>
-              <div class="color-gray">Canada</div>
-              <div>Delta - Greenwood</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-mouse absolute">
-       <a href=""><div class="mouse absolute"></div></a>
+  <!-- menu-page -->
+  <div id="menu-page" class="fixed">
+    <div class="container flex ai-c">
+      <div class="flex">
+        <ul>
+          <li id="move-01" class="flex ai-c"><span>01</span><span>About</span></li>
+          <li id="move-02" class="flex ai-c"><span>02</span><span>Education</span></li>
+          <li id="move-03" class="flex ai-c"><span>03</span><span>Skill</span></li>
+          <li id="move-04" class="flex ai-c"><span>04</span><span>Portfolio</span></li>
+          <li id="move-05" class="flex ai-c"><span>05</span><span>Contact</span></li>
+        </ul>
+        <ul class="flex flex-col">
+          <li class="flex flex-col ai-c"><span class="font-bold">EMAIL</span><span>cdbitmana@gmail.com</span></li>
+          <li class="flex flex-col ai-c"><span class="font-bold">CALL ME</span><span>010 6710 81114</span></li>
+          <li class="flex flex-col ai-c"><span class="font-bold">ADDRESS</span><span>대전광역시 서구 관저동</span></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
 
+  <main id="main" class="relative">
+
+    <!-- bg-line -->
+    <div class="bg-line">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- left-info -->
+    <div id="left-info" class="fixed color-gray flex ai-c">
+      <div class="txt">
+        <span class="font-bold">Follow Me</span>
+      </div>
+      <div class="bg-line"></div>
+      <div class="sns">
+        <a href="" class="color-gray"><i class="fab fa-instagram"></i></a>
+        <a href="" class="color-gray"><i class="fab fa-linkedin-in"></i></a>
+        <a href="" class="color-gray"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <!-- side-menu -->
+    <div id="btn-side-menu" class="btn-side-menu fixed flex jc-c ai-c color-white click-check">
+      <i class="far fa-life-ring click-check"></i>
+    </div>
+
+    <div id="side-menu" class="side-menu fixed click-check">
+      <div class="click-check">
+        <span class="color-white font-bold click-check">Theme Color</span>
+        <ul class="click-check">
+          <li id="btn-bg-red" class="click-check"></li>
+          <li id="btn-bg-orange" class="click-check"></li>
+          <li id="btn-bg-brown" class="click-check"></li>
+          <li id="btn-bg-green"class="click-check"></li>
+          <li id="btn-bg-blue" class="click-check"></li>
+          <li id="btn-bg-purple"class="click-check"></li>
+          <li id="btn-bg-yellow" class="click-check"></li>
+          <li id="btn-bg-rose" class="click-check"></li>
+        </ul>
+      </div>
+      <div class="click-check">
+        <span class="color-white font-bold click-check">Menu</span>
+        <ul class="flex click-check">
+          <li class="flex jc-c ai-c click-check"><span>Overlay</span></li>
+          <li class="flex jc-c ai-c click-check"><span>Right</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- section-1 -->
+    <section id="section-1">
+      <div class="container relative">
+        <div class="txt-group absolute">
+          <div id="header-point" class="txt-1 relative">
+            <div></div>
+            <span class="color-gray">Lee Myoung Hak</span>
+          </div>
+          <div id="typing" class="txt-2 font-bold font-reverse">
+          </div>
+          <div class="txt-3 flex">
+            <div class="flex ai-c">
+              <div>
+                <div class="color-gray">Morocco</div>
+                <div>Rabat - Casablanca</div>
+              </div>
+            </div>
+            <div class="flex ai-c">
+              <div>
+                <div class="color-gray">USA</div>
+                <div>California - Detorit</div>
+              </div>
+            </div>
+            <div class="flex ai-c">
+              <div>
+                <div class="color-gray">Canada</div>
+                <div>Delta - Greenwood</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-mouse absolute">
+        <a href="#section-2"><div class="mouse absolute"></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-2 -->
+    <section id="section-2">
+
+    </section>
+
+  </main>
 </body>
 
 </html>

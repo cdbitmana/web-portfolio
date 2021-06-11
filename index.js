@@ -12,6 +12,19 @@ t1.from('.box-1 > .text', {
 });
 텍스트 하나씩 나타나는 애니메이션 (GSAP) */
 
+/* 헤더 배경색 */
+gsap.to('#header', {
+  scrollTrigger: {
+    trigger: "#header-point",
+    //markers: true,
+    start: "top 0%",
+    end: "bottom+=150 0%",
+    scrub: true
+  },
+  backgroundColor: '#1d1e20'
+});
+/* 헤더 배경색 */
+
 /* 글자 타이핑되는 애니메이션 (배열에 있는 텍스트가 순서대로 타이핑되고 지워짐) */
 let i = 0,
   j = 0;
@@ -70,6 +83,59 @@ gsap.from('.section-2 > div > .box-2', {
   opacity: 0
 });
 /* GSAP ScrollTrigger (스크롤로 특정 태그 위치로 이동 시 요소 나타나게 하기) */
+
+/* 메뉴 버튼 */
+document.getElementById('btn-menu').addEventListener('click', function () {
+  document.getElementById('btn-menu').style.display = 'none';
+  document.getElementById('btn-menu-close').style.display = 'flex';
+})
+
+document.getElementById('btn-menu-close').addEventListener('click', function () {
+  document.getElementById('btn-menu').style.display = 'block';
+  document.getElementById('btn-menu-close').style.display = 'none';
+})
+/* 메뉴 버튼 */
+
+/* 메뉴 버튼 클릭 효과 */
+document.getElementById('btn-menu').addEventListener('click', function () {
+  document.getElementById('menu-effect-open').classList.add('menu-effect-open');
+  document.getElementById('top').classList.add('hidden');
+  gsap.to('#menu-page', {
+    opacity: 1,
+    duration: 1.5
+  });
+  setTimeout(function () {
+    document.getElementById('menu-page').style.zIndex = 10;
+  }, 500)
+  setTimeout(function () {
+    document.getElementById('menu-effect-open').classList.remove('menu-effect-open');
+  }, 2000)
+})
+
+document.getElementById('btn-menu-close').addEventListener('click', function () {
+  document.getElementById('menu-effect-close').classList.add('menu-effect-close');
+  setTimeout(function() {
+    document.getElementById('menu-effect-close').classList.remove('menu-effect-close');
+    document.getElementById('top').classList.remove('hidden');
+    document.getElementById('menu-page').style.zIndex = -1;
+  }, 600)
+})
+/* 메뉴 버튼 클릭 효과 */
+
+/* 메뉴 네비게이션 버튼 */
+document.getElementById('move-01').addEventListener('click', function () {
+  document.getElementById('menu-effect-close').classList.add('menu-effect-close');
+  document.getElementById('btn-menu').style.display = 'block';
+  document.getElementById('btn-menu-close').style.display = 'none';
+
+  setTimeout(function() {
+    document.getElementById('top').classList.remove('hidden');
+    document.getElementById('menu-effect-close').classList.remove('menu-effect-close');
+    document.getElementById('menu-page').style.zIndex = -1;
+    document.getElementById('section-2').scrollIntoView(true);
+  }, 600)
+})
+/* 메뉴 네비게이션 버튼 */
 
 /* ColorPallete 열고 닫기 */
 var ColorPalleteIsOpened = false;
