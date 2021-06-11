@@ -1,8 +1,14 @@
 /* 변수 선언 */
 :root {
   --bg-theme: var(--bg-yellow);
-  --bg-yellow: rgb(252,244,172);
-  --bg-orange: #f8875a;
+  --bg-red: #ff3d4f;
+  --bg-orange: #f7971c;
+  --bg-brown: #c79864;
+  --bg-green: #6b9839;
+  --bg-blue: #4d74e6;
+  --bg-purple: #8a2be2;
+  --bg-yellow: #f1df44;
+  --bg-rose: #e350b8;
 }
 /* 변수 선언 */
 
@@ -24,6 +30,12 @@ body {
 a {
   text-decoration: none;
   color: initial;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* 라이브러리 */
@@ -154,6 +166,108 @@ header .btn-menu > div:nth-child(2) {
   transform: translateX(-6px);
 }
 /* 헤더 */
+
+/* Side-Menu */
+.btn-side-menu {
+  top: 50%;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-theme);
+  transform: translateY(-50%);
+  transition: all 1s;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.side-menu {
+  font-family: 'Saira', sans-serif;
+  width: 240px;
+  top: 50%;
+  right: 0;
+  padding: 60px 10px 60px 10px;
+  background-color: #1d1e20;
+  transform: translate(260px,-50%);
+  transition: all 1s;
+  z-index: 50;
+}
+
+.side-menu li {
+  cursor: pointer;
+}
+
+.side-menu > div:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.side-menu > div > span {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.side-menu > div > ul {
+  width: 100%;
+  display: inline-block;
+}
+
+.side-menu > div:nth-child(1) > ul > li {
+  float: left;
+  width: calc((100% - 104px) / 4);
+  height: 28px;
+  margin: 10px 13px 10px 13px;
+}
+
+.side-menu > div:nth-child(1) > ul > li:nth-child(1) {
+  background-color: var(--bg-red);
+}
+
+.side-menu > div:nth-child(1) > ul > li:nth-child(2) {
+  background-color: var(--bg-orange);
+}
+
+.side-menu > div > ul > li:nth-child(3) {
+  background-color: var(--bg-brown);
+}
+
+.side-menu > div > ul > li:nth-child(4) {
+  background-color: var(--bg-green);
+}
+
+.side-menu > div > ul > li:nth-child(5) {
+  background-color: var(--bg-blue);
+}
+
+.side-menu > div > ul > li:nth-child(6) {
+  background-color: var(--bg-purple);
+}
+
+.side-menu > div > ul > li:nth-child(7) {
+  background-color: var(--bg-yellow);
+}
+
+.side-menu > div > ul > li:nth-child(8) {
+  background-color: var(--bg-rose);
+}
+
+.side-menu > div:nth-child(2) > ul > li {
+  float: left;
+  width: calc((240px - 32px) / 2);
+  height: 46px;
+  margin:0 8px 0 8px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--bg-theme);
+  color: white;
+  font-size: 12px;
+  background-color: #333333;
+  transition: all .7s;
+}
+
+.side-menu > div:nth-child(2) > ul > li:hover {
+  background-color: var(--bg-theme);
+}
+/* Side-Menu */
 
 /* Left-Info */
 #left-info {

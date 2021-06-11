@@ -73,28 +73,26 @@ gsap.from('.section-2 > div > .box-2', {
 
 /* ColorPallete 열고 닫기 */
 var ColorPalleteIsOpened = false;
-document.getElementById('btn-color').addEventListener('click', function () {
+document.getElementById('btn-side-menu').addEventListener('click', function () {
   if (ColorPalleteIsOpened == false) {
-    document.getElementById('color-pallete').style.transform = 'translateX(0)';
-    document.getElementById('btn-color').style.transform = 'translateX(-50px)';
+    document.getElementById('side-menu').style.transform = 'translate(0,-50%)';
+    document.getElementById('btn-side-menu').style.transform = 'translate(-260px,-50%)';
     ColorPalleteIsOpened = true;
     return;
   }
   if (ColorPalleteIsOpened == true) {
-    document.getElementById('color-pallete').style.transform = 'translateX(50px)';
-    document.getElementById('btn-color').style.transform = 'translateX(0)';
+    document.getElementById('side-menu').style.transform = 'translate(260px,-50%)';
+    document.getElementById('btn-side-menu').style.transform = 'translate(0,-50%)';
     ColorPalleteIsOpened = false;
     return;
   }
 })
 
 window.addEventListener('click', function ($event) {
-  if ($event.target.id != 'btn-color' && $event.target.id != 'btn-color-icon' &&
-    $event.target.id != 'color-pallete' && $event.target.id != 'colorbox-yellow' &&
-    $event.target.id != 'colorbox-orange') {
+  if ($event.target.parentNode.className.includes('click-check',0) == false && $event.target.className.includes('click-check',0) == false && $event.target.id != 'btn-side-menu' ) {
     if (ColorPalleteIsOpened == true) {
-      document.getElementById('color-pallete').style.transform = 'translateX(50px)';
-      document.getElementById('btn-color').style.transform = 'translateX(0)';
+      document.getElementById('btn-side-menu').style.transform = 'translate(0,-50%)';
+      document.getElementById('side-menu').style.transform = 'translate(260px,-50%)';
       ColorPalleteIsOpened = false;
       return;
     }
@@ -103,12 +101,36 @@ window.addEventListener('click', function ($event) {
 /* ColorPallete 열고 닫기 */
 
 /* Theme Color 일괄적으로 변경하기 */
-document.getElementById('colorbox-yellow').addEventListener('click', function () {
-  document.documentElement.style.setProperty('--bg-theme', 'rgb(252,244,172)'); // CSS의 변수값 설정
+document.getElementById('btn-bg-red').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#ff3d4f'); // CSS의 변수값 설정
 })
 
-document.getElementById('colorbox-orange').addEventListener('click', function () {
-  document.documentElement.style.setProperty('--bg-theme', '#f8875a'); // CSS의 변수값 설정
+document.getElementById('btn-bg-orange').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#f7971c'); // CSS의 변수값 설정
+})
+
+document.getElementById('btn-bg-brown').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#c79864'); // CSS의 변수값 설정
+})
+
+document.getElementById('btn-bg-green').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#6b9839'); // CSS의 변수값 설정
+})
+
+document.getElementById('btn-bg-blue').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#4d74e6'); // CSS의 변수값 설정
+})
+
+document.getElementById('btn-bg-purple').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#8a2be2'); // CSS의 변수값 설정
+})
+
+document.getElementById('btn-bg-yellow').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#f1df44'); // CSS의 변수값 설정
+})
+
+document.getElementById('btn-bg-rose').addEventListener('click', function () {
+  document.documentElement.style.setProperty('--bg-theme', '#e350b8'); // CSS의 변수값 설정
 })
 /* Theme Color 일괄적으로 변경하기 */
 
