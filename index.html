@@ -20,6 +20,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <!-- GOOGLE Material ICONS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- emailjs -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+  <script type="text/javascript">
+   ( function() { 
+     emailjs.init("user_qjniPBbYnPTPtPzNM0Gzt"); 
+    })
+    ();
+  </script>
+
+
 
 </head>
 
@@ -41,6 +57,15 @@
           <div></div>
         </div>
         <div id="btn-menu-close" class="btn-menu-close flex jc-c ai-c"><i class="fas fa-times"></i></div>
+        <div id="menu-right" class="menu-right flex ai-c">
+          <ul class="flex color-gray">
+            <li id="menu-overlay-1" class="relative"><span></span>Home</li>
+            <li id="menu-overlay-2" class="relative"><span></span>About</li>
+            <li id="menu-overlay-3" class="relative"><span></span>Education</li>
+            <li id="menu-overlay-4" class="relative"><span></span>Portfolio</li>
+            <li id="menu-overlay-5" class="relative"><span></span>Contact</li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -54,11 +79,11 @@
     <div class="container flex ai-c">
       <div class="flex con-min-width">
         <ul>
-          <li id="move-01" class="flex ai-c"><span>01</span><span>About</span></li>
-          <li id="move-02" class="flex ai-c"><span>02</span><span>Education</span></li>
-          <li id="move-03" class="flex ai-c"><span>03</span><span>Skill</span></li>
-          <li id="move-04" class="flex ai-c"><span>04</span><span>Portfolio</span></li>
-          <li id="move-05" class="flex ai-c"><span>05</span><span>Contact</span></li>
+          <li id="move-01" class="flex ai-c"><span>01</span><span>Home</span></li>
+          <li id="move-02" class="flex ai-c"><span>01</span><span>About</span></li>
+          <li id="move-03" class="flex ai-c"><span>02</span><span>Education</span></li>
+          <li id="move-04" class="flex ai-c"><span>03</span><span>Portfolio</span></li>
+          <li id="move-05" class="flex ai-c"><span>04</span><span>Contact</span></li>
         </ul>
         <ul class="flex flex-col">
           <li class="flex flex-col ai-c"><span class="font-bold">EMAIL</span><span>cdbitmana@gmail.com</span></li>
@@ -115,8 +140,8 @@
       <div class="click-check">
         <span class="color-white font-bold click-check">Menu</span>
         <ul class="flex click-check">
-          <li class="flex jc-c ai-c click-check"><span>Overlay</span></li>
-          <li class="flex jc-c ai-c click-check"><span>Right</span></li>
+          <li id="btn-menu-overlay" class="flex jc-c ai-c click-check"><span>Overlay</span></li>
+          <li id="btn-menu-right" class="flex jc-c ai-c click-check"><span>Right</span></li>
         </ul>
       </div>
     </div>
@@ -153,7 +178,7 @@
           </div>
         </div>
         <div class="btn-mouse absolute">
-        <a href="#section-2"><div class="mouse absolute"></div></a>
+        <a id="btn-mouse" href="javascript:void(0)"><div class="mouse absolute"></div></a>
         </div>
       </div>
     </section>
@@ -204,6 +229,178 @@
         </div>
       </div>
     </section>
+
+    <!-- section-3 education -->
+    <section id="section-3">
+      <div class="container">
+        <div class="con-min-width">
+          <div class="title relative color-gray">Education</div>
+          <div class="subtitle color-white">SBS아카데미컴퓨터아트학원 수료</div>
+          <div class="color-white">(2020.10 ~ 2021.04)</div>
+          <div class="card-section flex">
+            <div class="card flex flex-col">
+              <div class="color-gray">
+                <i class="fab fa-java"></i>
+              </div>
+              <div class="color-white card-title">
+                JAVA
+              </div>
+              <div class="color-gray card-desc">
+                SPRING BOOT, MVC, 이클립스, JSP, SERVLET
+              </div>
+            </div>
+            <div class="card flex flex-col">
+              <div class="color-gray">
+                <span class="material-icons">
+                  web
+                  </span>
+              </div>
+              <div class="color-white card-title">
+                HTML, CSS, JAVASCRIPT
+              </div>
+              <div class="color-gray card-desc">
+                GSAP, SWIPER, TAILWIND, JQUERY, AJAX, NODE.JS, VUE, IONIC
+              </div>
+            </div>
+            <div class="card flex flex-col">
+              <div class="color-gray">
+                <span class="material-icons">
+                  more
+                  </span>
+              </div>
+              <div class="color-white card-title">
+                ETC
+              </div>
+              <div class="color-gray card-desc">
+                MYSQL, TOMCAT, TYPESCIPT, AXIOS, CENTOS, LINUX
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-4 portfolio -->
+    <section id="section-4">
+      <div class="container">
+        <div class="con-min-width">
+          <div class="flex flex-col">
+            <div class="title color-gray">Projects</div>
+            <div class="flex portfolio-box-1">
+              <a href="https://blog.hailrain.site/" target="_blank">
+                <div class="color-gray">WEB</div>
+                <div class="color-gray">개인 블로그</div>
+                <div class="color-white">DLOG</div>
+              </a>
+              <a href="https://indieworld.hailrain.site/usr/home/main" target="_blank">
+                <div class="color-gray">WEB</div>
+                <div class="color-gray">커뮤니티 사이트</div>
+                <div class="color-white">INDIE WORLD</div>
+              </a>
+              <a href="https://pd.audictionary.com" target="_blank">
+                <div class="color-gray">APP</div>
+                <div class="color-gray">비대면 오디션 서비스 앱</div>
+                <div class="color-white">AUDICTIONARY</div>
+              </a>
+            </div>
+            <div class="flex portfolio-box-2">
+              <div>
+                <div class="txt-group-1 flex flex-col">
+                  <span class="color-white">DLOG</span>
+                  <span class="color-gray">개인 블로그</span>
+                </div>
+                <div class="txt-container flex flex-col">
+                  <div class="txt-group-2 flex flex-col">
+                    <span class="color-white">작업 기간</span>
+                    <span class="color-gray">2달</span>
+                  </div>
+                  <div class="txt-group-3 flex flex-col">
+                    <span class="color-white">설명</span>
+                    <span class="color-gray">자바를 이용해 HTML, CSS, JS 파일을 생성. 블로그에는 교육 기간 중 배웠던 내용들을 정리했습니다.</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="txt-group-1 flex flex-col">
+                  <span class="color-white">INDIE WORLD</span>
+                  <span class="color-gray">커뮤니티 사이트</span>
+                </div>
+                <div class="txt-container flex flex-col">
+                  <div class="txt-group-2 flex flex-col">
+                    <span class="color-white">작업 기간</span>
+                    <span class="color-gray">1달</span>
+                  </div>
+                  <div class="txt-group-3 flex flex-col">
+                    <span class="color-white">설명</span>
+                    <span class="color-gray">자바 JSP SERVLET으로 제작. MVC 구조. 인디 게임에 관한 정보와 자료를 공유하고 이야기를 나누는 커뮤니티 사이트입니다.</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="txt-group-1 flex flex-col">
+                  <span class="color-white">AUDICTIONARY</span>
+                  <span class="color-gray">비대면 오디션 서비스 앱</span>
+                </div>
+                <div class="txt-container flex flex-col">
+                  <div class="txt-group-2 flex flex-col">
+                    <span class="color-white">작업 기간</span>
+                    <span class="color-gray">3달</span>
+                  </div>
+                  <div class="txt-group-3 flex flex-col">
+                    <span class="color-white">설명</span>
+                    <span class="color-gray">VUE3, IONIC FRAMEWORK로 제작. 영화 제작자용 버전 개발. 비대면으로 영화 오디션 공고를 올리고 지원자들의 지원을 받아 오디션을 볼 수 있습니다.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section-5 contact -->
+    <section id="section-5">
+      <div class="container">
+        <div class="con-min-width">
+          <div class="flex flex-col">
+            <div class="title color-gray">Contact</div>
+            <div class="contact flex">
+              <div class="info-box flex flex-col">
+                <div class="flex flex-col txt-box">
+                  <span class="color-white">EMAIL</span>
+                  <span class="color-gray">cdbitmana@gmail.com</span>
+                </div>
+                <div class="flex flex-col txt-box">
+                  <span class="color-white">PHONE</span>
+                  <span class="color-gray">010 6710 8114</span>
+                </div>
+                <div class="flex flex-col txt-box">
+                  <span class="color-white">ADDRESS</span>
+                  <span class="color-gray">대전광역시 서구 관저동</span>
+                </div>
+              </div>
+              <div class="flex flex-col form-box relative">
+                <div class="flex input-box-1">
+                  <input id="username" type="text" placeholder="UserName">
+                  <input id="useremail" type="text" placeholder="Email">
+                  <input id="userphone" type="text" placeholder="Phone">
+                </div>
+                <div class="input-box-2">
+                  <textarea name="" id="usermsg" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+                <div id="btn-submit" class="input-box-3">
+                  <div>
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Send Message</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 </body>

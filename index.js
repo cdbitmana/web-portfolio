@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 /* 텍스트 하나씩 나타나는 애니메이션 (GSAP)
 var t1 = gsap.timeline({
   repeat:-1,
@@ -17,13 +19,122 @@ gsap.to('#header', {
   scrollTrigger: {
     trigger: "#header-point",
     //markers: true,
-    start: "top 0%",
+    start: "top 25%",
     end: "bottom+=150 0%",
     scrub: true
   },
   backgroundColor: '#1d1e20'
 });
 /* 헤더 배경색 */
+
+/* 헤더 오버레이 효과 */
+var section1height = document.getElementById('section-1').getBoundingClientRect().height -78;
+var section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -78;
+var section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
+var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
+var section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
+  
+window.addEventListener('scroll', function () {
+  
+  var curpoint = document.documentElement.scrollTop;
+  
+  if( curpoint < section1height ) {
+    document.getElementById('menu-overlay-1').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section1height && curpoint <  section2height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section2height && curpoint <  section3height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section3height && curpoint <  section4height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section4height && curpoint <  section5height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section5height ) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.add('color-theme','overlay-sel');
+  }
+})
+/* 헤더 오버레이 효과 */
+
+/* 헤더 Right 네비게이션 */
+document.getElementById('menu-overlay-1').addEventListener('click', function () {
+  var scrollPoint = document.getElementById('section-1');
+  var offSet = 78;
+
+  window.scrollTo({
+    top: scrollPoint.offsetTop - offSet
+  })
+})
+
+document.getElementById('menu-overlay-2').addEventListener('click', function () {
+  var scrollPoint = document.getElementById('section-2');
+  var offSet = 78;
+
+  window.scrollTo({
+    top: scrollPoint.offsetTop - offSet
+  })
+})
+
+document.getElementById('menu-overlay-3').addEventListener('click', function () {
+  var scrollPoint = document.getElementById('section-3');
+  var offSet = 78;
+
+  window.scrollTo({
+    top: scrollPoint.offsetTop - offSet
+  })
+})
+
+document.getElementById('menu-overlay-4').addEventListener('click', function () {
+  var scrollPoint = document.getElementById('section-4');
+  var offSet = 78;
+
+  window.scrollTo({
+    top: scrollPoint.offsetTop - offSet
+  })
+})
+
+document.getElementById('menu-overlay-5').addEventListener('click', function () {
+  var scrollPoint = document.getElementById('section-5');
+  var offSet = 78;
+
+  window.scrollTo({
+    top: scrollPoint.offsetTop - offSet
+  })
+})
+/* 헤더 Right 네비게이션 */
 
 /* 글자 타이핑되는 애니메이션 (배열에 있는 텍스트가 순서대로 타이핑되고 지워짐) */
 let i = 0,
@@ -56,8 +167,20 @@ function remove() {
 type();
 /* 글자 타이핑되는 애니메이션 (배열에 있는 텍스트가 순서대로 타이핑되고 지워짐) */
 
+/* section-1 btn-mouse */
+document.getElementById('btn-mouse').addEventListener('click', function () {
+  var scrollPoint = document.getElementById('section-2');
+  var offSet = 78;
+
+  window.scrollTo({
+    top: scrollPoint.offsetTop - offSet
+  })
+
+})
+/* section-1 btn-mouse */
+
 /* GSAP ScrollTrigger (스크롤로 특정 태그 위치로 이동 시 요소 나타나게 하기) 
-gsap.registerPlugin(ScrollTrigger);
+
 
 gsap.from('.section-2 > div > .box-1', {
   scrollTrigger: {
@@ -95,6 +218,71 @@ document.getElementById('btn-menu-close').addEventListener('click', function () 
   document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
 })
 /* 메뉴 버튼 */
+
+/* 메뉴 Overlay,Right 전환 */
+document.getElementById('btn-menu-right').addEventListener('click', function () {
+  var curpoint = document.documentElement.scrollTop;
+
+  document.getElementById('btn-menu').style.display = 'none';
+  document.getElementById('btn-menu-close').style.display = 'none';
+  document.getElementById('menu-right').style.display = 'flex';
+
+  if( curpoint < section1height ) {
+    document.getElementById('menu-overlay-1').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section1height && curpoint <  section2height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section2height && curpoint <  section3height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section3height && curpoint <  section4height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section4height && curpoint <  section5height) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.add('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
+  }
+  else if( curpoint >= section5height ) {
+    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
+    document.getElementById('menu-overlay-6').classList.add('color-theme','overlay-sel');
+  }
+  
+})
+
+document.getElementById('btn-menu-overlay').addEventListener('click', function () {
+  document.getElementById('menu-right').style.display = 'none';
+  document.getElementById('btn-menu').style.display = 'block';
+})
+/* 메뉴 Overlay,Right 전환 */
 
 /* 메뉴 버튼 클릭 효과 */
 document.getElementById('btn-menu').addEventListener('click', function () {
@@ -162,7 +350,123 @@ document.getElementById('move-01').addEventListener('click', function () {
     document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
     
+    var scrollPoint = document.getElementById('section-1');
+    var offSet = 78;
+
+    window.scrollTo({
+      top: scrollPoint.offsetTop - offSet
+    })
+
+  }, 1000)
+
+  // 메뉴 닫기 이펙트 연출 (1초 동안)
+  gsap.from('#menu-effect-close', {
+    transform: 'scale(0)',
+    duration: 1
+  })
+})
+
+document.getElementById('move-02').addEventListener('click', function () {
+  document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
+  document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
+  document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
+  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
+  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
+  
+  // 메뉴 이펙트, 메뉴 페이지 숨기기, 선택 위치로 페이지 스크롤 이동
+  setTimeout(function () {
+    document.getElementById('menu-effect-open').style.zIndex = -1;
+    document.getElementById('menu-effect-close').style.zIndex = -1;
+    document.getElementById('menu-page').style.zIndex = -1;
+    
     var scrollPoint = document.getElementById('section-2');
+    var offSet = 78;
+
+    window.scrollTo({
+      top: scrollPoint.offsetTop - offSet
+    })
+
+  }, 1000)
+
+  // 메뉴 닫기 이펙트 연출 (1초 동안)
+  gsap.from('#menu-effect-close', {
+    transform: 'scale(0)',
+    duration: 1
+  })
+})
+
+document.getElementById('move-03').addEventListener('click', function () {
+  document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
+  document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
+  document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
+  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
+  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
+  
+  // 메뉴 이펙트, 메뉴 페이지 숨기기, 선택 위치로 페이지 스크롤 이동
+  setTimeout(function () {
+    document.getElementById('menu-effect-open').style.zIndex = -1;
+    document.getElementById('menu-effect-close').style.zIndex = -1;
+    document.getElementById('menu-page').style.zIndex = -1;
+    
+    var scrollPoint = document.getElementById('section-3');
+    var offSet = 78;
+
+    window.scrollTo({
+      top: scrollPoint.offsetTop - offSet
+    })
+
+  }, 1000)
+
+  // 메뉴 닫기 이펙트 연출 (1초 동안)
+  gsap.from('#menu-effect-close', {
+    transform: 'scale(0)',
+    duration: 1
+  })
+})
+
+document.getElementById('move-04').addEventListener('click', function () {
+  document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
+  document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
+  document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
+  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
+  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
+  
+  // 메뉴 이펙트, 메뉴 페이지 숨기기, 선택 위치로 페이지 스크롤 이동
+  setTimeout(function () {
+    document.getElementById('menu-effect-open').style.zIndex = -1;
+    document.getElementById('menu-effect-close').style.zIndex = -1;
+    document.getElementById('menu-page').style.zIndex = -1;
+    
+    var scrollPoint = document.getElementById('section-4');
+    var offSet = 78;
+
+    window.scrollTo({
+      top: scrollPoint.offsetTop - offSet
+    })
+
+  }, 1000)
+
+  // 메뉴 닫기 이펙트 연출 (1초 동안)
+  gsap.from('#menu-effect-close', {
+    transform: 'scale(0)',
+    duration: 1
+  })
+})
+
+document.getElementById('move-05').addEventListener('click', function () {
+  document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
+  document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
+  document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
+  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
+  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
+  
+  // 메뉴 이펙트, 메뉴 페이지 숨기기, 선택 위치로 페이지 스크롤 이동
+  setTimeout(function () {
+    document.getElementById('menu-effect-open').style.zIndex = -1;
+    document.getElementById('menu-effect-close').style.zIndex = -1;
+    document.getElementById('menu-page').style.zIndex = -1;
+    
+    var scrollPoint = document.getElementById('section-5');
     var offSet = 78;
 
     window.scrollTo({
@@ -255,3 +559,26 @@ gsap.from('#scrollTop', {
   opacity: 0
 })
 /* ScrollTop Button */
+
+/* contact email send */
+document.getElementById('btn-submit').addEventListener('click', function () {
+  var userName = document.getElementById('username').value;
+  var userEmail = document.getElementById('useremail').value;
+  var userPhone = document.getElementById('userphone').value;
+  var userMsg = document.getElementById('usermsg').value;
+  var templateParams = { 
+   name: userName,
+   email: userEmail,
+   phone: userPhone,
+   message: userMsg
+   };
+  emailjs.send('portfolio', 'template_tw9djs9', templateParams) 
+  .then(
+    function(response) { 
+      console.log('SUCCESS!', response.status, response.text);
+    }, 
+  function(error) { 
+    console.log('FAILED...', error);
+  });
+})
+/* contact email send */
