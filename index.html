@@ -381,17 +381,33 @@
               </div>
               <div class="flex flex-col form-box relative">
                 <div class="flex input-box-1">
-                  <input id="username" type="text" placeholder="UserName">
-                  <input id="useremail" type="text" placeholder="Email">
-                  <input id="userphone" type="text" placeholder="Phone">
+                  <div>
+                    <input id="username" type="text" placeholder="UserName">
+                  </div>
+                  <div class="relative">
+                    <input id="useremail" type="text" placeholder="Email">
+                    <span id="emailCheck" class="absolute">이메일 형식으로 입력하세요.</span>
+                  </div>
+                  <div class="relative">
+                    <input id="userphone" type="text" placeholder="Phone">
+                    <span id="phoneCheck" class="absolute">전화번호 형식으로 입력하세요.</span>
+                  </div>
                 </div>
                 <div class="input-box-2">
-                  <textarea name="" id="usermsg" cols="30" rows="10" placeholder="Message"></textarea>
+                  <div class="relative">
+                    <textarea name="" id="usermsg" cols="30" rows="10" placeholder="Message"></textarea>
+                    <span id="msgCheck" class="absolute">내용을 입력하세요.</span>
+                  </div>
                 </div>
-                <div id="btn-submit" class="input-box-3">
-                  <div>
-                    <i class="fas fa-paper-plane"></i>
-                    <span>Send Message</span>
+                <div class="flex input-box-3 relative">
+                  <div id="btn-submit" class="relative">
+                    <div class="relative">
+                      <i class="fas fa-paper-plane"></i>
+                      <span>Send Message</span>
+                    </div>
+                  </div>
+                  <div id="msg-sent">
+                    <span></span>
                   </div>
                 </div>
               </div>

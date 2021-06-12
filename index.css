@@ -311,6 +311,16 @@ header .menu-right ul li span {
   opacity: 0;
 }
 
+@media (max-width:650px) {
+  header .menu-right ul li {
+    font-size: 12px;
+  }
+
+  header .con-min-width {
+    margin: 0 15px;
+  }
+}
+
 .overlay-sel::before {
   content: "";
   display: block;
@@ -381,6 +391,12 @@ header .menu-right ul li span {
   font-size: 35px;
 }
 
+@media (max-width:600px) {
+  #menu-page .container > div >  ul:nth-child(1) li span:nth-child(2) {
+    font-size: 20px;
+  }
+}
+
 #menu-page .container > div > ul:nth-child(2) {
   justify-content: space-around;
 }
@@ -394,6 +410,12 @@ header .menu-right ul li span {
 #menu-page .container > div >  ul:nth-child(2) li span:nth-child(1) {
   font-size: 20px;
   color: white;
+}
+
+@media (max-width:600px) {
+  #menu-page .container > div >  ul:nth-child(2) li span:nth-child(1) {
+    font-size: 14px;
+  }
 }
 
 #menu-page .container > div >  ul:nth-child(2) li span:nth-child(2) {
@@ -1258,8 +1280,9 @@ header .menu-right ul li span {
 }
 
 #section-5 .container .form-box input {
-  background-color: transparent;
+  background-color: rgb(34,34,34);
   border-color: rgba(255,255,255, 0.1);
+  z-index: 3;
 }
 
 #section-5 .container .form-box input:focus {
@@ -1270,8 +1293,34 @@ header .menu-right ul li span {
   justify-content: space-between;
 }
 
+
+#section-5 .container .form-box .input-box-1 > div {
+  width: 30%;
+}
+
+@media (max-width:960px) {
+  #section-5 .container .form-box .input-box-1 {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  #section-5 .container .form-box .input-box-1 > div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
+#section-5 .container .form-box .input-box-1 > div span {
+  display: none;
+  color: var(--bg-theme);
+  transition: all 0.5s;
+  width: 100%;
+  text-align: center;
+}
+
 #section-5 .container .form-box .input-box-1 input{
-  width: 28%;
+  width: 100%;
   height: 40px;
   color: white;
   text-align: center;
@@ -1279,12 +1328,19 @@ header .menu-right ul li span {
 
 #section-5 .container .form-box .input-box-2 {
   margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+@media (max-width:960px) {
+  #section-5 .container .form-box .input-box-2 {
+    margin-top: 10px;
+  }
 }
 
 #section-5 .container .form-box .input-box-2 textarea {
   width: 100%;
   height: 200px;
-  background-color: transparent;
+  background-color: rgb(34,34,34);
   border-color: rgba(255,255,255, 0.1);
   resize: none;
   font-family: 'Saira', sans-serif;
@@ -1292,6 +1348,14 @@ header .menu-right ul li span {
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
+}
+
+#section-5 .container .form-box .input-box-2 > div span {
+  display: none;
+  color: var(--bg-theme);
+  transition: all 0.5s;
+  width: 100%;
+  text-align: center;
 }
 
 #section-5 .container .form-box .input-box-2 textarea:focus {
@@ -1306,66 +1370,75 @@ header .menu-right ul li span {
 }
 
 #section-5 .container .form-box .input-box-3 {
-  width: 50%;
-  margin-top: 20px;
-  padding: 20px 40px 20px 40px;
-  background-color: rgb(34,34,34);
-  color: white;
-  text-align: center;
-  cursor: pointer;
   position: relative;
+  width: 100%;
   transition: all 0.5s;
   box-sizing: border-box;
-  height: 30px;
+  justify-content: space-between;
 }
 
-@media (max-width:960px) {
-  #section-5 .container .form-box .input-box-3 {
-    width: 100%;
+#section-5 .container .form-box .input-box-3 > div {
+  width: 38%;
+  background-color: rgb(34,34,34);
+  color: white;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+@media (max-width:700px) {
+  #section-5 .container .form-box .input-box-3 > div {
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
   }
 }
 
-#section-5 .container .form-box .input-box-3::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--bg-theme);
-  width: 0;
-  height: 100%;
-  transition: all 0.5s;
-  z-index: 1;
+#section-5 .container .form-box .input-box-3 > div:nth-child(1) {
+  cursor: pointer;
 }
 
-#section-5 .container .form-box .input-box-3:hover::before {
-  width: 50%;
-  transition: width 0.5s;
-}
-
-#section-5 .container .form-box .input-box-3::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: var(--bg-theme);
-  width: 0;
-  height: 100%;
-  transition: all 0.5s;
-  z-index: 1;
-}
-
-#section-5 .container .form-box .input-box-3:hover::after {
-  width: 50%;
-  transition: width 0.5s;
-}
-
-#section-5 .container .form-box .input-box-3 div {
-  position: absolute;
+#section-5 .container .form-box .input-box-3 > div > div {
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 3;
+}
+
+#section-5 .container .form-box .input-box-3 > div:nth-child(1)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-theme);
+}
+
+#section-5 .container .form-box .input-box-3 > div:nth-child(1)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-theme);
+}
+
+#section-5 .container .form-box .input-box-3 > div:nth-child(1):hover::before {
+  width: 50%;
+  transition: all 0.5s;
+}
+
+#section-5 .container .form-box .input-box-3 > div:nth-child(1):hover::after {
+  width: 50%;
+  transition: all 0.5s;
+}
+
+#section-5 .container .form-box .input-box-3 #msg-sent {
+  display: none;
 }
 /* section-5 contact */

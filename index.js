@@ -566,6 +566,31 @@ document.getElementById('btn-submit').addEventListener('click', function () {
   var userEmail = document.getElementById('useremail').value;
   var userPhone = document.getElementById('userphone').value;
   var userMsg = document.getElementById('usermsg').value;
+
+  var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/;
+  var phoneCheck = /(^02.{0}|^01.{1}|[0-9]{3})([0-9]{4})([0-9]{4})/;
+  if (emailCheck.test(userEmail) == false){
+    document.getElementById('emailCheck').style.display = 'block';
+    return;
+  } else {
+    document.getElementById('emailCheck').style.display = 'none';
+  }
+
+  if (phoneCheck.test(userPhone) == false){
+    document.getElementById('phoneCheck').style.display = 'block';
+    return;
+  } else {
+    document.getElementById('phoneCheck').style.display = 'none';
+  }
+
+  if (userMsg.length <= 0){
+    document.getElementById('msgCheck').style.display = 'block';
+    return;
+  } else {
+    document.getElementById('msgCheck').style.display = 'none';
+  }
+
+  
   var templateParams = { 
    name: userName,
    email: userEmail,
@@ -576,9 +601,15 @@ document.getElementById('btn-submit').addEventListener('click', function () {
   .then(
     function(response) { 
       console.log('SUCCESS!', response.status, response.text);
+      document.getElementById('msg-sent').innerText = 'Message Sent!';
+      document.getElementById('msg-sent').style.display = 'block';
+      document.getElementById('msg-sent').style.backgroundColor = 'rgb(55, 152, 59)';
     }, 
   function(error) { 
     console.log('FAILED...', error);
+    document.getElementById('msg-sent').innerText = 'Sending Failed!';
+      document.getElementById('msg-sent').style.display = 'block';
+      document.getElementById('msg-sent').style.backgroundColor = 'var(--bg-red)';
   });
 })
 /* contact email send */
