@@ -86,54 +86,96 @@ gsap.from('.section-2 > div > .box-2', {
 
 /* 메뉴 버튼 */
 document.getElementById('btn-menu').addEventListener('click', function () {
-  document.getElementById('btn-menu').style.display = 'none';
-  document.getElementById('btn-menu-close').style.display = 'flex';
+  document.getElementById('btn-menu').style.display = 'none'; // 메뉴 버튼 숨기기
+  document.getElementById('btn-menu-close').style.display = 'flex'; // 메뉴 닫기 버튼 보이기
 })
 
 document.getElementById('btn-menu-close').addEventListener('click', function () {
-  document.getElementById('btn-menu').style.display = 'block';
-  document.getElementById('btn-menu-close').style.display = 'none';
+  document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
+  document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
 })
 /* 메뉴 버튼 */
 
 /* 메뉴 버튼 클릭 효과 */
 document.getElementById('btn-menu').addEventListener('click', function () {
-  document.getElementById('menu-effect-open').classList.add('menu-effect-open');
-  document.getElementById('top').classList.add('hidden');
-  gsap.to('#menu-page', {
-    opacity: 1,
-    duration: 1.5
-  });
+  document.getElementById('menu-effect-open').style.zIndex = 55; // 메뉴 여는 이펙트 보이기
+  document.getElementById('top').style.height = 0; // 원래 화면 숨기기
+  document.getElementById('top').style.overflow = 'hidden'; // 원래 화면 숨기기
+
+  // 메뉴 페이지 보이기 (1초 후에)
   setTimeout(function () {
-    document.getElementById('menu-page').style.zIndex = 10;
-  }, 500)
+    document.getElementById('menu-page').style.zIndex = 49;
+  }, 1000)
+
+  // 메뉴 여는 이펙트 숨기기 (1초 후에)
   setTimeout(function () {
-    document.getElementById('menu-effect-open').classList.remove('menu-effect-open');
-  }, 2000)
+    document.getElementById('menu-effect-open').style.zIndex = -1;
+  }, 1000)
+
+  // 메뉴 여는 이펙트 연출 (1초 동안)
+  gsap.from('#menu-effect-open', {
+    transform: 'scale(0)',
+    duration: 1
+  })
+
+  // 메뉴 페이지 나타나기 (1초 동안)
+  gsap.from('#menu-page', {
+    opacity: 0,
+    duration: 1,
+  })
+
 })
 
 document.getElementById('btn-menu-close').addEventListener('click', function () {
-  document.getElementById('menu-effect-close').classList.add('menu-effect-close');
-  setTimeout(function() {
-    document.getElementById('menu-effect-close').classList.remove('menu-effect-close');
-    document.getElementById('top').classList.remove('hidden');
+  document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
+  document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
+  document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
+  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
+  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
+
+  // 메뉴 닫는 이펙트, 메뉴 페이지 숨기기
+  setTimeout(function () {
+    document.getElementById('menu-effect-open').style.zIndex = -1;
+    document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
-  }, 600)
+  }, 1000)
+
+  // 메뉴 닫는 이펙트 연출 (1초 동안)
+  gsap.from('#menu-effect-close', {
+    transform: 'scale(0)',
+    duration: 1
+  })
 })
 /* 메뉴 버튼 클릭 효과 */
 
 /* 메뉴 네비게이션 버튼 */
 document.getElementById('move-01').addEventListener('click', function () {
-  document.getElementById('menu-effect-close').classList.add('menu-effect-close');
-  document.getElementById('btn-menu').style.display = 'block';
-  document.getElementById('btn-menu-close').style.display = 'none';
-
-  setTimeout(function() {
-    document.getElementById('top').classList.remove('hidden');
-    document.getElementById('menu-effect-close').classList.remove('menu-effect-close');
+  document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
+  document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
+  document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
+  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
+  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
+  
+  // 메뉴 이펙트, 메뉴 페이지 숨기기, 선택 위치로 페이지 스크롤 이동
+  setTimeout(function () {
+    document.getElementById('menu-effect-open').style.zIndex = -1;
+    document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
-    document.getElementById('section-2').scrollIntoView(true);
-  }, 600)
+    
+    var scrollPoint = document.getElementById('section-2');
+    var offSet = 78;
+
+    window.scrollTo({
+      top: scrollPoint.offsetTop - offSet
+    })
+
+  }, 1000)
+
+  // 메뉴 닫기 이펙트 연출 (1초 동안)
+  gsap.from('#menu-effect-close', {
+    transform: 'scale(0)',
+    duration: 1
+  })
 })
 /* 메뉴 네비게이션 버튼 */
 

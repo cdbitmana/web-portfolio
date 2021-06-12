@@ -27,19 +27,21 @@
 
   <!-- 헤더 -->
   <header id="header" class="fixed">
-    <div class="container flex">
-      <a href="">
-        <div class="font-bold">
-          <span class="color-theme">이</span><span class="color-white">명학</span>
+    <div class="container">
+      <div class="flex con-min-width">
+        <a href="">
+          <div class="font-bold">
+            <span class="color-theme">이</span><span class="color-white">명학</span>
+          </div>
+          <span class="color-gray">DEVELOPER</span>
+        </a>
+        <div id="btn-menu" class="btn-menu">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <span class="color-gray">DEVELOPER</span>
-      </a>
-      <div id="btn-menu" class="btn-menu">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div id="btn-menu-close" class="btn-menu-close flex jc-c ai-c"><i class="fas fa-times"></i></div>
       </div>
-      <div id="btn-menu-close" class="btn-menu-close flex jc-c ai-c"><i class="fas fa-times"></i></div>
     </div>
   </header>
 
@@ -50,7 +52,7 @@
   <!-- menu-page -->
   <div id="menu-page" class="fixed">
     <div class="container flex ai-c">
-      <div class="flex">
+      <div class="flex con-min-width">
         <ul>
           <li id="move-01" class="flex ai-c"><span>01</span><span>About</span></li>
           <li id="move-02" class="flex ai-c"><span>02</span><span>Education</span></li>
@@ -122,7 +124,7 @@
     <!-- section-1 -->
     <section id="section-1">
       <div class="container relative">
-        <div class="txt-group absolute">
+        <div class="txt-group absolute con-min-width">
           <div id="header-point" class="txt-1 relative">
             <div></div>
             <span class="color-gray">Lee Myoung Hak</span>
@@ -158,9 +160,47 @@
 
     <!-- section-2 about -->
     <section id="section-2">
-      <div class="container">
-        <div class="txt-box color-gray relative">
+      <div class="container relative">
+        <div class="txt-box color-gray relative con-min-width">
           About Us
+        </div>
+        <div class="txt-main color-white con-min-width">
+          <div>안녕하세요!</div>
+          <div><span class="color-theme">이명학</span>입니다.</div>
+        </div>
+        <div class="flex con-min-width">
+          <div class="txt-info color-white">
+            <ul>
+              <li><span class="color-gray">Address</span><span>대전광역시 서구 관저동</span></li>
+              <li><span class="color-gray">Phone</span><span>010 6710 8114</span></li>
+              <li><span class="color-gray">Email</span><span>cdbitmana@gmail.com</span></li>
+            </ul>
+          </div>
+          <div class="skill-info">
+            <ul>
+              <li>
+                <div class="flex color-gray">
+                  <span>HTML</span>
+                  <span>80%</span>
+                </div>
+                <div></div>
+              </li>
+              <li>
+                <div class="flex color-gray">
+                  <span>CSS</span>
+                  <span>60%</span>
+                </div>
+                <div></div>
+              </li>
+              <li>
+                <div class="flex color-gray">
+                  <span>JAVASCRIPT</span>
+                  <span>80%</span>
+                </div>
+                <div></div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
