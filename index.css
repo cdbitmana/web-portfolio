@@ -152,11 +152,11 @@ ul, li {
 
 @media (max-width:1000px) {
   .con-min-width {
-    margin:0 80px;
+    margin:0 50px;
   }
 }
 
-@media (max-width:400px) {
+@media (max-width:960px) {
   .con-min-width {
     margin:0 10px;
   }
@@ -1094,6 +1094,10 @@ header .menu-right ul li span {
 }
 
 @media (max-width: 960px) {
+  #section-3 .container .subtitle {
+    font-size: 18px;
+  }
+
   #section-3 .container .card-section {
     flex-direction: column;
   }
