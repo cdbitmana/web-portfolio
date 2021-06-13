@@ -256,6 +256,18 @@ header .container > div {
   justify-content: space-between;
 }
 
+@media (max-width: 480px) {
+  header .container > div {
+    flex-direction: column;
+  }
+
+  header .container .btn-menu {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+}
+
 header .container a {
   text-align: center;
 }
@@ -287,6 +299,12 @@ header .btn-menu-close {
   cursor: pointer;
   display: none;
   color: white;
+}
+
+@media (max-width: 480px) {
+  header .btn-menu-close {
+    margin-top: 10px;
+  }
 }
 
 header .btn-menu-close i {
@@ -321,11 +339,20 @@ header .menu-right ul li span {
   header .menu-right ul li {
     font-size: 12px;
   }
+}
 
-  header .con-min-width {
-    margin: 0 15px;
+@media (max-width: 460px) {
+  header .menu-right {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header .menu-right ul li {
+    margin: 0 8px;
   }
 }
+
 
 .overlay-sel::before {
   content: "";
