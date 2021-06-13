@@ -547,12 +547,12 @@ document.getElementById('btn-bg-rose').addEventListener('click', function () {
 /* Theme Color 일괄적으로 변경하기 */
 
 /* ScrollTop Button */
-gsap.from('#scrollTop', {
+gsap.from('#btn-scrollTop', {
   scrollTrigger: {
-    trigger: "#scrollTopPoint",
-    // markers: true, 
-    start: "top 100%",
-    end: "bottom 100%",
+    trigger: "#section-2",
+    //markers: true, 
+    start: "top+=100 100%",
+    end: "bottom-=350 100%",
     scrub: true
   },
   y: 100,

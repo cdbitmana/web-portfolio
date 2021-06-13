@@ -70,11 +70,7 @@
     </div>
   </header>
 
-  <!-- menu-effect -->
-  <div id="menu-effect-open" class="fixed"></div>
-  <div id="menu-effect-close" class="fixed"></div>
-
-  <!-- menu-page -->
+<!-- menu-page -->
   <div id="menu-page" class="fixed">
     <div class="container flex ai-c">
       <div class="flex con-min-width">
@@ -94,7 +90,18 @@
     </div>
   </div>
 
+  <!-- scrollTop Button -->
+  <a id="btn-scrollTop" href="#top" class="fixed flex jc-c ai-c">
+    <div >
+      <i class="fas fa-arrow-up"></i>
+    </div>
+  </a>
+
   <main id="main" class="relative">
+
+  <!-- menu-effect -->
+  <div id="menu-effect-open" class="fixed"></div>
+  <div id="menu-effect-close" class="fixed"></div>
 
     <!-- bg-line -->
     <div class="bg-line">
@@ -417,8 +424,29 @@
       </div>
     </section>
 
+</main>
 
-  </main>
+<!-- 푸터 -->
+<footer>
+  <div class="container">
+    <div class="con-min-width">
+      <div class="flex color-gray">
+        <div>
+          <span>Ⓒ Copyrights portfolio.hailrain.site <span id="cr-year"></span></span>.
+          <span>All Rights Reserved.</span>
+        </div>
+        <div class="flex ai-c">
+          <span>Newsletter Signup</span>
+          <div class="flex relative ai-c">
+            <input type="text" placeholder="Email">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 
 </html>
