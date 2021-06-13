@@ -562,6 +562,8 @@ gsap.from('#btn-scrollTop', {
 
 /* contact email send */
 document.getElementById('btn-submit').addEventListener('click', function () {
+
+
   var userName = document.getElementById('username').value;
   var userEmail = document.getElementById('useremail').value;
   var userPhone = document.getElementById('userphone').value;
@@ -589,7 +591,6 @@ document.getElementById('btn-submit').addEventListener('click', function () {
   } else {
     document.getElementById('msgCheck').style.display = 'none';
   }
-
   
   var templateParams = { 
    name: userName,
@@ -597,19 +598,24 @@ document.getElementById('btn-submit').addEventListener('click', function () {
    phone: userPhone,
    message: userMsg
    };
+
+  document.getElementById('msg-sent').style.display = 'flex';
+
   emailjs.send('portfolio', 'template_tw9djs9', templateParams) 
   .then(
     function(response) { 
+      document.getElementById('loading').style.display = 'none';
       console.log('SUCCESS!', response.status, response.text);
-      document.getElementById('msg-sent').innerText = 'Message Sent!';
+      document.getElementById('msg-sent').innerText = '메시지 전송!';
       document.getElementById('msg-sent').style.display = 'block';
       document.getElementById('msg-sent').style.backgroundColor = 'rgb(55, 152, 59)';
     }, 
-  function(error) { 
-    console.log('FAILED...', error);
-    document.getElementById('msg-sent').innerText = 'Sending Failed!';
+    function(error) { 
+      document.getElementById('loading').style.display = 'none';
+      console.log('FAILED...', error);
+      document.getElementById('msg-sent').innerText = '전송 실패!';
       document.getElementById('msg-sent').style.display = 'block';
       document.getElementById('msg-sent').style.backgroundColor = 'var(--bg-red)';
-  });
+    });
 })
 /* contact email send */

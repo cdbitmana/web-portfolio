@@ -259,6 +259,22 @@ header .container > div {
 @media (max-width: 480px) {
   header .container > div {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .container .logo-txt {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  header .container .logo-txt > span {
+    display: flex;
+    align-items: center;
+  }
+
+  header .container .logo-txt > div {
+    margin-right: 5px;
   }
 
   header .container .btn-menu {
@@ -341,7 +357,7 @@ header .menu-right ul li span {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   header .menu-right {
     margin-top: 10px;
     margin-left: auto;
@@ -1454,12 +1470,15 @@ header .menu-right ul li span {
 
 #section-5 .container .form-box .input-box-3 > div {
   width: 38%;
-  background-color: rgb(34,34,34);
   color: white;
   padding: 10px 30px 10px 30px;
   text-align: center;
   margin-top: 10px;
   position: relative;
+}
+
+#section-5 .container .form-box .input-box-3 > div#btn-submit {
+  background-color: rgb(34,34,34);
 }
 
 @media (max-width:700px) {
@@ -1515,6 +1534,27 @@ header .menu-right ul li span {
 
 #section-5 .container .form-box .input-box-3 #msg-sent {
   display: none;
+}
+
+#section-5 .container .form-box .input-box-3 #msg-sent .loading {
+  height: 20px;
+  width: 20px;
+  border: 6px solid white;
+  animation: spin 800ms infinite linear;
+  border-right-color: var(--bg-theme);
+  border-top-color: var(--bg-theme);
+  border-radius: 100%;
+  transition: all .5s;
+}
+
+@keyframes spin {
+  from { 
+    transform: rotate(0deg); 
+  }
+  
+  to { 
+    transform: rotate(359deg); 
+  }
 }
 /* section-5 contact */
 

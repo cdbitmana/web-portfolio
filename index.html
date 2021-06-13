@@ -72,7 +72,7 @@
   <header id="header" class="fixed">
     <div class="container">
       <div class="flex con-min-width">
-        <a href="">
+        <a href="" class="logo-txt">
           <div class="font-bold">
             <span class="color-theme">이</span><span class="color-white">명학</span>
           </div>
@@ -416,7 +416,7 @@
               <div class="flex flex-col form-box relative">
                 <div class="flex input-box-1">
                   <div>
-                    <input id="username" type="text" placeholder="UserName">
+                    <input id="username" type="text" placeholder="Name">
                   </div>
                   <div class="relative">
                     <input id="useremail" type="text" placeholder="Email">
@@ -437,11 +437,12 @@
                   <div id="btn-submit" class="relative">
                     <div class="relative">
                       <i class="fas fa-paper-plane"></i>
-                      <span>Send Message</span>
+                      <span>메시지 보내기</span>
                     </div>
                   </div>
-                  <div id="msg-sent">
+                  <div id="msg-sent" class="flex jc-c ai-c">
                     <span></span>
+                    <span id="loading" class="loading"></span>
                   </div>
                 </div>
               </div>
