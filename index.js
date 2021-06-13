@@ -619,3 +619,9 @@ document.getElementById('btn-submit').addEventListener('click', function () {
     });
 })
 /* contact email send */
+
+/* copyright 올해연도 구하기 */
+var now = new Date();
+var year = now.getFullYear();
+document.getElementById('cr-year').innerText = year;
+/* copyright 올해연도 구하기 */
