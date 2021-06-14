@@ -76,7 +76,7 @@
   <!-- 헤더 -->
   <header id="header" class="fixed">
     <div class="container">
-      <div class="flex con-min-width">
+      <div class="flex ai-c con-min-width">
         <a href="" class="logo-txt">
           <div class="font-bold">
             <span class="color-theme">이</span><span class="color-white">명학</span>
@@ -229,8 +229,7 @@
           About Us
         </div>
         <div class="txt-main color-white con-min-width">
-          <div>안녕하세요!</div>
-          <div><span class="color-theme">이명학</span>입니다.</div>
+          <div><span class="color-theme"><span>이</span><span>명</span><span>학</span></span>입니다.</div>
         </div>
         <div class="flex con-min-width">
           <div class="txt-info color-white">
@@ -429,7 +428,7 @@
                     <span id="emailCheck" class="absolute">이메일 형식으로 입력하세요.</span>
                   </div>
                   <div class="relative">
-                    <input id="userphone" type="tel" placeholder="* Phone">
+                    <input id="userphone" type="tel" maxlength="12" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="* Phone">
                     <span id="phoneCheck" class="absolute">전화번호 형식으로 입력하세요.</span>
                   </div>
                 </div>

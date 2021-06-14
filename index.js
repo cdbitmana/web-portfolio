@@ -1,18 +1,20 @@
 gsap.registerPlugin(ScrollTrigger);
 
-/* 텍스트 하나씩 나타나는 애니메이션 (GSAP)
-var t1 = gsap.timeline({
-  repeat:-1,
-  repeatDelay:1
-});
-
-t1.from('.box-1 > .text', {
+/* 텍스트 하나씩 나타나는 애니메이션 (GSAP) section-1 nametext */
+gsap.from('#section-2 .container .txt-main div span span', {
+  scrollTrigger: {
+    trigger: "#section-2",
+    //markers: true,
+    start: "top 100%-=300",
+    end: "bottom+=150 0%",
+    //scrub: true
+    toggleActions: "play none none reverse"
+  },
   opacity: 0,
-  x: 100,
-  duration: 0.1,
-  stagger:0.1
+  duration: 1,
+  stagger: 0.3
 });
-텍스트 하나씩 나타나는 애니메이션 (GSAP) */
+/* 텍스트 하나씩 나타나는 애니메이션 (GSAP) */
 
 /* 헤더 배경색 */
 gsap.to('#header', {
@@ -33,9 +35,30 @@ var section2height = section1height + document.getElementById('section-2').getBo
 var section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
 var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
 var section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
-  
-window.addEventListener('scroll', function () {
-  
+
+window.addEventListener('resize', function () {
+  if (document.body.offsetWidth <= 960) {
+    section1height = document.getElementById('section-1').getBoundingClientRect().height -78;
+    section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -78;
+    section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
+    section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
+    section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
+    setOverlay;
+  }
+
+  if (document.body.offsetWidth > 960) {
+    section1height = document.getElementById('section-1').getBoundingClientRect().height -78;
+    section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -78;
+    section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
+    section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
+    section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
+    setOverlay;
+  }
+})
+
+window.addEventListener('scroll', setOverlay);
+
+function setOverlay () {
   var curpoint = document.documentElement.scrollTop;
   
   if( curpoint < section1height ) {
@@ -73,14 +96,7 @@ window.addEventListener('scroll', function () {
     document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-5').classList.add('color-theme','overlay-sel');
   }
-  else if( curpoint >= section5height ) {
-    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-  }
-})
+}
 /* 헤더 오버레이 효과 */
 
 /* 헤더 Right 네비게이션 */
@@ -221,54 +237,7 @@ document.getElementById('btn-menu-right').addEventListener('click', function () 
   document.getElementById('btn-menu-close').style.display = 'none';
   document.getElementById('menu-right').style.display = 'flex';
 
-  if( curpoint < section1height ) {
-    document.getElementById('menu-overlay-1').classList.add('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
-  }
-  else if( curpoint >= section1height && curpoint <  section2height) {
-    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-2').classList.add('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
-  }
-  else if( curpoint >= section2height && curpoint <  section3height) {
-    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-3').classList.add('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
-  }
-  else if( curpoint >= section3height && curpoint <  section4height) {
-    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-4').classList.add('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
-  }
-  else if( curpoint >= section4height && curpoint <  section5height) {
-    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-5').classList.add('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
-  }
-  else if( curpoint >= section5height ) {
-    document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.add('color-theme','overlay-sel');
-  }
+  setOverlay;
   
 })
 

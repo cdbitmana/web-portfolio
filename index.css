@@ -248,7 +248,7 @@ header {
 }
 
 header .container {
-  padding: 18px 0;
+  padding: 4px 0;
   align-items: center;
 }
 
@@ -303,8 +303,11 @@ header .btn-menu {
 header .btn-menu > div {
   width: 20px;
   height: 3px;
-  margin-top: 7px;
   background-color: white;
+}
+
+header .btn-menu > div:not(:nth-child(1)) {
+  margin-top: 7px;
 }
 
 header .btn-menu > div:nth-child(2) {
@@ -359,9 +362,7 @@ header .menu-right ul li span {
 
 @media (max-width: 480px) {
   header .menu-right {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 7px auto;
   }
 
   header .menu-right ul li {
@@ -393,7 +394,7 @@ header .menu-right ul li span {
   bottom: 10px;
   background-color: rgb(25,26,28);
   border: 1px solid rgb(157,161,165);
-  z-index: 555;
+  z-index: 48;
   color: white;
   transition: all .5s;
 }
@@ -917,31 +918,22 @@ header .menu-right ul li span {
   margin-top: 60px;
 }
 
-#section-2 .container .txt-main > div:nth-child(1) {
-  font-size: 24px;
-}
-
-#section-2 .container .txt-main > div:nth-child(2) {
+#section-2 .container .txt-main > div {
   font-size: 34px;
 }
 
-#section-2 .container .txt-main > div:nth-child(2) > span {
+#section-2 .container .txt-main > div > span {
   font-size: 60px;
   transition: all .5s;
 }
 
 @media (max-width: 600px) {
-  #section-2 .container .txt-main > div:nth-child(1) {
-    font-size: 16px;
-  }
-
-  #section-2 .container .txt-main > div:nth-child(2) {
+  #section-2 .container .txt-main > div {
     font-size: 26px;
   }
 
-  #section-2 .container .txt-main > div:nth-child(2) > span {
+  #section-2 .container .txt-main > div > span {
     font-size: 40px;
-    
   }
 }
 
@@ -1429,6 +1421,7 @@ header .menu-right ul li span {
   height: 40px;
   color: white;
   text-align: center;
+  box-sizing: border-box;
 }
 
 #section-5 .container .form-box .input-box-2 {
