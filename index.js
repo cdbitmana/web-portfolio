@@ -44,7 +44,6 @@ window.addEventListener('scroll', function () {
     document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
   }
   else if( curpoint >= section1height && curpoint <  section2height) {
     document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
@@ -52,7 +51,6 @@ window.addEventListener('scroll', function () {
     document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
   }
   else if( curpoint >= section2height && curpoint <  section3height) {
     document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
@@ -60,7 +58,6 @@ window.addEventListener('scroll', function () {
     document.getElementById('menu-overlay-3').classList.add('color-theme','overlay-sel');
     document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
   }
   else if( curpoint >= section3height && curpoint <  section4height) {
     document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
@@ -68,7 +65,6 @@ window.addEventListener('scroll', function () {
     document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-4').classList.add('color-theme','overlay-sel');
     document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
   }
   else if( curpoint >= section4height && curpoint <  section5height) {
     document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
@@ -76,7 +72,6 @@ window.addEventListener('scroll', function () {
     document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-5').classList.add('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.remove('color-theme','overlay-sel');
   }
   else if( curpoint >= section5height ) {
     document.getElementById('menu-overlay-1').classList.remove('color-theme','overlay-sel');
@@ -84,7 +79,6 @@ window.addEventListener('scroll', function () {
     document.getElementById('menu-overlay-3').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-4').classList.remove('color-theme','overlay-sel');
     document.getElementById('menu-overlay-5').classList.remove('color-theme','overlay-sel');
-    document.getElementById('menu-overlay-6').classList.add('color-theme','overlay-sel');
   }
 })
 /* 헤더 오버레이 효과 */
@@ -501,7 +495,20 @@ document.getElementById('btn-side-menu').addEventListener('click', function () {
 })
 
 window.addEventListener('click', function ($event) {
-  if ($event.target.parentNode.className.includes('click-check',0) == false && $event.target.className.includes('click-check',0) == false && $event.target.id != 'btn-side-menu' ) {
+  if (  $event.target.parentNode.className.includes('click-check',0) == false 
+  && $event.target.className.includes('click-check',0) == false 
+  && $event.target.id != 'btn-side-menu' ) {
+    if (ColorPalleteIsOpened == true) {
+      document.getElementById('btn-side-menu').style.transform = 'translate(0,-50%)';
+      document.getElementById('side-menu').style.transform = 'translate(260px,-50%)';
+      ColorPalleteIsOpened = false;
+      return;
+    }
+  }
+})
+
+window.addEventListener('click', function ($event) {
+  if (  $event.target.tagName == 'svg' ) {
     if (ColorPalleteIsOpened == true) {
       document.getElementById('btn-side-menu').style.transform = 'translate(0,-50%)';
       document.getElementById('side-menu').style.transform = 'translate(260px,-50%)';

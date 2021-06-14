@@ -1594,11 +1594,12 @@ header .menu-right ul li span {
   height:40px;
   text-align:center;
   cursor:pointer;
-  transition: all 0.2s;
+  transition: all 0.4s;
 }
 
 .custom_zoomcontrol span:hover {
-  color: var(--bg-theme);
+  color: white;
+  background-color: var(--bg-theme);
 }
 
 .custom_zoomcontrol span:first-child {
@@ -1615,11 +1616,12 @@ header .menu-right ul li span {
   z-index:1;
   background-color:#f5f5f5;
   font-size: 14px;
-  transition: all .2s;
+  transition: all .4s;
 }
 
 .custom_markercontrol:hover {
-  color: var(--bg-theme);
+  color: white;
+  background-color: var(--bg-theme);
 }
 /* section-5 contact */
 
