@@ -25,6 +25,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <!-- GOOGLE Material ICONS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
 
   <!-- FAVICON -->
   <link rel="shortcut icon" href="images/hr.png">
@@ -71,425 +73,511 @@
 
 <body id="top">
 
-  
+  <!-- side-menu -->
+  <div id="btn-side-menu" class="btn-side-menu fixed flex jc-c ai-c color-white click-check">
+    <i class="far fa-life-ring click-check"></i>
+  </div>
 
-  <!-- 헤더 -->
-  <header id="header" class="fixed">
-    <div class="container">
-      <div class="flex ai-c con-min-width">
-        <a href="" class="logo-txt">
-          <div class="font-bold">
-            <span class="color-theme">이</span><span class="color-white">명학</span>
+  <div id="side-menu" class="side-menu fixed click-check">
+    <div class="click-check">
+      <span class="color-white font-bold click-check">Theme Color</span>
+      <ul class="click-check">
+        <li id="btn-bg-red" class="click-check"></li>
+        <li id="btn-bg-orange" class="click-check"></li>
+        <li id="btn-bg-brown" class="click-check"></li>
+        <li id="btn-bg-green"class="click-check"></li>
+        <li id="btn-bg-blue" class="click-check"></li>
+        <li id="btn-bg-purple"class="click-check"></li>
+        <li id="btn-bg-yellow" class="click-check"></li>
+        <li id="btn-bg-rose" class="click-check"></li>
+      </ul>
+    </div>
+    <div class="click-check">
+      <span class="color-white font-bold click-check">Menu</span>
+      <ul class="flex click-check">
+        <li id="btn-menu-overlay" class="flex jc-c ai-c click-check"><span>Overlay</span></li>
+        <li id="btn-menu-right" class="flex jc-c ai-c click-check"><span>Right</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="page">
+    <!-- 헤더 -->
+    <header id="header" class="fixed">
+      <div class="container">
+        <div class="flex ai-c con-min-width">
+          <a href="" class="logo-txt flex flex-col">
+            <div class="font-bold">
+              <span class="color-theme">이</span><span class="color-white">명학</span>
+            </div>
+            <span class="color-gray">DEVELOPER</span>
+          </a>
+          <div id="btn-menu" class="btn-menu">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
-          <span class="color-gray">DEVELOPER</span>
-        </a>
-        <div id="btn-menu" class="btn-menu">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div id="btn-menu-close" class="btn-menu-close flex jc-c ai-c"><i class="fas fa-times"></i></div>
+          <div id="menu-right" class="menu-right flex ai-c">
+            <ul class="flex color-gray">
+              <li id="menu-overlay-1" class="relative"><span></span>Home</li>
+              <li id="menu-overlay-2" class="relative"><span></span>About</li>
+              <li id="menu-overlay-3" class="relative"><span></span>Education</li>
+              <li id="menu-overlay-4" class="relative"><span></span>Portfolio</li>
+              <li id="menu-overlay-5" class="relative"><span></span>Contact</li>
+            </ul>
+          </div>
         </div>
-        <div id="btn-menu-close" class="btn-menu-close flex jc-c ai-c"><i class="fas fa-times"></i></div>
-        <div id="menu-right" class="menu-right flex ai-c">
-          <ul class="flex color-gray">
-            <li id="menu-overlay-1" class="relative"><span></span>Home</li>
-            <li id="menu-overlay-2" class="relative"><span></span>About</li>
-            <li id="menu-overlay-3" class="relative"><span></span>Education</li>
-            <li id="menu-overlay-4" class="relative"><span></span>Portfolio</li>
-            <li id="menu-overlay-5" class="relative"><span></span>Contact</li>
+      </div>
+    </header>
+
+  <!-- menu-page -->
+    <div id="menu-page" class="fixed">
+      <div class="container flex ai-c">
+        <div class="flex con-min-width">
+          <ul>
+            <li id="move-01" class="flex ai-c"><span>01</span><span>Home</span></li>
+            <li id="move-02" class="flex ai-c"><span>01</span><span>About</span></li>
+            <li id="move-03" class="flex ai-c"><span>02</span><span>Education</span></li>
+            <li id="move-04" class="flex ai-c"><span>03</span><span>Portfolio</span></li>
+            <li id="move-05" class="flex ai-c"><span>04</span><span>Contact</span></li>
+          </ul>
+          <ul class="flex flex-col">
+            <li class="flex flex-col ai-c"><span class="font-bold">EMAIL</span><span>cdbitmana@gmail.com</span></li>
+            <li class="flex flex-col ai-c"><span class="font-bold">CALL ME</span><span>010 6710 81114</span></li>
+            <li class="flex flex-col ai-c"><span class="font-bold">ADDRESS</span><span>대전광역시 서구 관저동</span></li>
           </ul>
         </div>
       </div>
     </div>
-  </header>
 
-<!-- menu-page -->
-  <div id="menu-page" class="fixed">
-    <div class="container flex ai-c">
-      <div class="flex con-min-width">
-        <ul>
-          <li id="move-01" class="flex ai-c"><span>01</span><span>Home</span></li>
-          <li id="move-02" class="flex ai-c"><span>01</span><span>About</span></li>
-          <li id="move-03" class="flex ai-c"><span>02</span><span>Education</span></li>
-          <li id="move-04" class="flex ai-c"><span>03</span><span>Portfolio</span></li>
-          <li id="move-05" class="flex ai-c"><span>04</span><span>Contact</span></li>
-        </ul>
-        <ul class="flex flex-col">
-          <li class="flex flex-col ai-c"><span class="font-bold">EMAIL</span><span>cdbitmana@gmail.com</span></li>
-          <li class="flex flex-col ai-c"><span class="font-bold">CALL ME</span><span>010 6710 81114</span></li>
-          <li class="flex flex-col ai-c"><span class="font-bold">ADDRESS</span><span>대전광역시 서구 관저동</span></li>
-        </ul>
+    <!-- scrollTop Button -->
+    <a id="btn-scrollTop" href="#top" class="fixed flex jc-c ai-c">
+      <div >
+        <i class="fas fa-arrow-up"></i>
       </div>
-    </div>
-  </div>
+    </a>
 
-  <!-- scrollTop Button -->
-  <a id="btn-scrollTop" href="#top" class="fixed flex jc-c ai-c">
-    <div >
-      <i class="fas fa-arrow-up"></i>
-    </div>
-  </a>
+    <main id="main" class="relative">
 
-  <main id="main" class="relative">
+    <!-- menu-effect -->
+    <div id="menu-effect-open" class="fixed"></div>
+    <div id="menu-effect-close" class="fixed"></div>
 
-  <!-- menu-effect -->
-  <div id="menu-effect-open" class="fixed"></div>
-  <div id="menu-effect-close" class="fixed"></div>
-
-    <!-- bg-line -->
-    <div class="bg-line">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-
-    <!-- left-info -->
-    <div id="left-info" class="fixed color-gray flex ai-c">
-      <div class="txt">
-        <span class="font-bold">Follow Me</span>
+      <!-- bg-line -->
+      <div class="bg-line">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-      <div class="bg-line"></div>
-      <div class="sns">
-        <a href="" class="color-gray"><i class="fab fa-instagram"></i></a>
-        <a href="" class="color-gray"><i class="fab fa-linkedin-in"></i></a>
-        <a href="" class="color-gray"><i class="fab fa-facebook-f"></i></a>
-      </div>
-    </div>
 
-    <!-- side-menu -->
-    <div id="btn-side-menu" class="btn-side-menu fixed flex jc-c ai-c color-white click-check">
-      <i class="far fa-life-ring click-check"></i>
-    </div>
-
-    <div id="side-menu" class="side-menu fixed click-check">
-      <div class="click-check">
-        <span class="color-white font-bold click-check">Theme Color</span>
-        <ul class="click-check">
-          <li id="btn-bg-red" class="click-check"></li>
-          <li id="btn-bg-orange" class="click-check"></li>
-          <li id="btn-bg-brown" class="click-check"></li>
-          <li id="btn-bg-green"class="click-check"></li>
-          <li id="btn-bg-blue" class="click-check"></li>
-          <li id="btn-bg-purple"class="click-check"></li>
-          <li id="btn-bg-yellow" class="click-check"></li>
-          <li id="btn-bg-rose" class="click-check"></li>
-        </ul>
+      <!-- left-info -->
+      <div id="left-info" class="fixed color-gray flex ai-c">
+        <div class="txt">
+          <span class="font-bold">Follow Me</span>
+        </div>
+        <div class="bg-line"></div>
+        <div class="sns">
+          <a href="" class="color-gray"><i class="fab fa-instagram"></i></a>
+          <a href="" class="color-gray"><i class="fab fa-linkedin-in"></i></a>
+          <a href="" class="color-gray"><i class="fab fa-facebook-f"></i></a>
+        </div>
       </div>
-      <div class="click-check">
-        <span class="color-white font-bold click-check">Menu</span>
-        <ul class="flex click-check">
-          <li id="btn-menu-overlay" class="flex jc-c ai-c click-check"><span>Overlay</span></li>
-          <li id="btn-menu-right" class="flex jc-c ai-c click-check"><span>Right</span></li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- section-1 -->
-    <section id="section-1">
-      <div class="container relative">
-        <div class="txt-group absolute con-min-width">
-          <div id="header-point" class="txt-1 relative">
-            <div></div>
-            <span class="color-gray">Lee Myoung Hak</span>
-          </div>
-          <div id="typing" class="txt-2 font-bold font-reverse">
-          </div>
-          <div class="txt-3 flex">
-            <div class="flex ai-c">
-              <div>
-                <div class="color-gray">Morocco</div>
-                <div>Rabat - Casablanca</div>
-              </div>
+      
+
+      
+
+      <!-- section-1 -->
+      <section id="section-1">
+        <div class="container relative">
+          <div class="txt-group absolute con-min-width">
+            <div id="header-point" class="txt-1 relative">
+              <div></div>
+              <span class="color-gray">Lee Myoung Hak</span>
             </div>
-            <div class="flex ai-c">
-              <div>
-                <div class="color-gray">USA</div>
-                <div>California - Detorit</div>
-              </div>
+            <div id="typing" class="txt-2 font-bold font-reverse">
             </div>
-            <div class="flex ai-c">
-              <div>
-                <div class="color-gray">Canada</div>
-                <div>Delta - Greenwood</div>
+            <div class="txt-3 flex">
+              <div class="flex ai-c">
+                <div>
+                  <div class="color-gray">Morocco</div>
+                  <div>Rabat - Casablanca</div>
+                </div>
+              </div>
+              <div class="flex ai-c">
+                <div>
+                  <div class="color-gray">USA</div>
+                  <div>California - Detorit</div>
+                </div>
+              </div>
+              <div class="flex ai-c">
+                <div>
+                  <div class="color-gray">Canada</div>
+                  <div>Delta - Greenwood</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="btn-mouse absolute">
-        <a id="btn-mouse" href="javascript:void(0)"><div class="mouse absolute"></div></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- section-2 about -->
-    <section id="section-2">
-      <div class="container relative">
-        <div class="txt-box color-gray relative con-min-width">
-          About Us
-        </div>
-        <div class="txt-main color-white con-min-width">
-          <div><span class="color-theme"><span>이</span><span>명</span><span>학</span></span>입니다.</div>
-        </div>
-        <div class="flex con-min-width">
-          <div class="txt-info color-white">
-            <ul>
-              <li><span class="color-gray">Address</span><span>대전광역시 서구 관저동</span></li>
-              <li><span class="color-gray">Phone</span><span>010 6710 8114</span></li>
-              <li><span class="color-gray">Email</span><span>cdbitmana@gmail.com</span></li>
-            </ul>
-          </div>
-          <div class="skill-info">
-            <ul>
-              <li>
-                <div class="flex color-gray">
-                  <span>HTML</span>
-                  <span>80%</span>
-                </div>
-                <div></div>
-              </li>
-              <li>
-                <div class="flex color-gray">
-                  <span>CSS</span>
-                  <span>60%</span>
-                </div>
-                <div></div>
-              </li>
-              <li>
-                <div class="flex color-gray">
-                  <span>JAVASCRIPT</span>
-                  <span>80%</span>
-                </div>
-                <div></div>
-              </li>
-            </ul>
+          <div class="btn-mouse absolute">
+          <a id="btn-mouse" href="javascript:void(0)"><div class="mouse absolute"></div></a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- section-3 education -->
-    <section id="section-3">
-      <div class="container">
-        <div class="con-min-width">
-          <div class="title relative color-gray">Education</div>
-          <div class="subtitle color-white">SBS아카데미컴퓨터아트학원 수료</div>
-          <div class="color-white">(2020.10 ~ 2021.04)</div>
-          <div class="card-section flex">
-            <div class="card flex flex-col">
+      <!-- section-2 about -->
+      <section id="section-2">
+        <div class="container relative">
+          <div class="txt-box color-gray relative con-min-width">
+            <span class="title">About Us</span>
+          </div>
+          <div class="txt-main color-white con-min-width">
+            <div><span class="color-theme"><span>이</span><span>명</span><span>학</span></span>입니다.</div>
+          </div>
+          <div class="flex con-min-width">
+            <div class="txt-info color-white">
+              <ul>
+                <li><span class="color-gray">Address</span><span>대전광역시 서구 관저동</span></li>
+                <li><span class="color-gray">Phone</span><span>010 6710 8114</span></li>
+                <li><span class="color-gray">Email</span><span>cdbitmana@gmail.com</span></li>
+              </ul>
+            </div>
+            <div class="skill-info">
+              <ul>
+                <li>
+                  <div class="flex color-gray">
+                    <span>HTML</span>
+                    <span>80%</span>
+                  </div>
+                  <div></div>
+                </li>
+                <li>
+                  <div class="flex color-gray">
+                    <span>CSS</span>
+                    <span>60%</span>
+                  </div>
+                  <div></div>
+                </li>
+                <li>
+                  <div class="flex color-gray">
+                    <span>JAVASCRIPT</span>
+                    <span>80%</span>
+                  </div>
+                  <div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-3 education -->
+      <section id="section-3">
+        <div class="container">
+          <div class="con-min-width">
+            <div class="relative color-gray">
+              <span class="title">Education</span>
+            </div>
+            <div class="subtitle color-white">SBS아카데미컴퓨터아트학원 수료</div>
+            <div class="color-white">(2020.10 ~ 2021.04)</div>
+            <div class="card-section flex">
+              <div class="card flex flex-col">
+                <div class="color-gray">
+                  <i class="fab fa-java"></i>
+                </div>
+                <div class="color-white card-title">
+                  JAVA
+                </div>
+                <div class="color-gray card-desc">
+                  SPRING BOOT, MVC, 이클립스, JSP, SERVLET
+                </div>
+              </div>
+              <div class="card flex flex-col">
+                <div class="color-gray">
+                  <span class="material-icons">
+                    web
+                    </span>
+                </div>
+                <div class="color-white card-title">
+                  HTML, CSS, JAVASCRIPT
+                </div>
+                <div class="color-gray card-desc">
+                  GSAP, SWIPER, TAILWIND, JQUERY, AJAX, NODE.JS, VUE, IONIC
+                </div>
+              </div>
+              <div class="card flex flex-col">
+                <div class="color-gray">
+                  <span class="material-icons">
+                    more
+                    </span>
+                </div>
+                <div class="color-white card-title">
+                  ETC
+                </div>
+                <div class="color-gray card-desc">
+                  MYSQL, TOMCAT, TYPESCIPT, AXIOS, CENTOS, LINUX
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-4 portfolio -->
+      <section id="section-4">
+        <div class="container">
+          <div class="con-min-width">
+            <div class="flex flex-col">
               <div class="color-gray">
-                <i class="fab fa-java"></i>
+                <span class="title">Projects</span>
               </div>
-              <div class="color-white card-title">
-                JAVA
+              <div class="flex portfolio-box-1">
+                <a id="popup-open-1" href="javascript:void(0)">
+                  <div class="color-gray">WEB</div>
+                  <div class="color-white">DLOG</div>
+                  <div class="color-gray">개인 블로그</div>
+                </a>
+                <a id="popup-open-2" href="#popup-1">
+                  <div class="color-gray">WEB</div>
+                  <div class="color-white">INDIE WORLD</div>
+                  <div class="color-gray">커뮤니티 사이트</div>
+                </a>
+                <a id="popup-open-3" href="https://pd.audictionary.com" target="_blank">
+                  <div class="color-gray">APP</div>
+                  <div class="color-white">AUDICTIONARY</div>
+                  <div class="color-gray">비대면 오디션 서비스 앱</div>
+                </a>
               </div>
-              <div class="color-gray card-desc">
-                SPRING BOOT, MVC, 이클립스, JSP, SERVLET
-              </div>
-            </div>
-            <div class="card flex flex-col">
-              <div class="color-gray">
-                <span class="material-icons">
-                  web
-                  </span>
-              </div>
-              <div class="color-white card-title">
-                HTML, CSS, JAVASCRIPT
-              </div>
-              <div class="color-gray card-desc">
-                GSAP, SWIPER, TAILWIND, JQUERY, AJAX, NODE.JS, VUE, IONIC
-              </div>
-            </div>
-            <div class="card flex flex-col">
-              <div class="color-gray">
-                <span class="material-icons">
-                  more
-                  </span>
-              </div>
-              <div class="color-white card-title">
-                ETC
-              </div>
-              <div class="color-gray card-desc">
-                MYSQL, TOMCAT, TYPESCIPT, AXIOS, CENTOS, LINUX
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- section-4 portfolio -->
-    <section id="section-4">
-      <div class="container">
-        <div class="con-min-width">
-          <div class="flex flex-col">
-            <div class="title color-gray">Projects</div>
-            <div class="flex portfolio-box-1">
-              <a href="https://blog.hailrain.site/" target="_blank">
-                <div class="color-gray">WEB</div>
-                <div class="color-white">DLOG</div>
-                <div class="color-gray">개인 블로그</div>
-              </a>
-              <a href="https://indieworld.hailrain.site/usr/home/main" target="_blank">
-                <div class="color-gray">WEB</div>
-                <div class="color-white">INDIE WORLD</div>
-                <div class="color-gray">커뮤니티 사이트</div>
-              </a>
-              <a href="https://pd.audictionary.com" target="_blank">
-                <div class="color-gray">APP</div>
-                <div class="color-white">AUDICTIONARY</div>
-                <div class="color-gray">비대면 오디션 서비스 앱</div>
-              </a>
-            </div>
-            <div class="portfolio-txt color-gray">클릭 시 해당 프로젝트 사이트로 이동합니다.</div>
-            <div class="flex portfolio-box-2">
-              <div>
-                <div class="txt-group-1 flex flex-col">
-                  <span class="color-white">DLOG</span>
-                  <span class="color-gray">개인 블로그</span>
-                </div>
-                <div class="txt-container flex flex-col">
-                  <div class="txt-group-2 flex flex-col">
-                    <span class="color-white">작업 기간</span>
-                    <span class="color-gray">2달</span>
+              <div class="portfolio-txt color-gray">클릭 시 해당 프로젝트 사이트로 이동합니다.</div>
+              <div class="flex portfolio-box-2">
+                <div>
+                  <div class="txt-group-1 flex flex-col">
+                    <span class="color-white">DLOG</span>
+                    <span class="color-gray">개인 블로그</span>
                   </div>
-                  <div class="txt-group-3 flex flex-col">
-                    <span class="color-white">설명</span>
-                    <span class="color-gray">자바를 이용해 HTML, CSS, JS 파일을 생성. 블로그에는 교육 기간 중 배웠던 내용들을 정리했습니다.</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="txt-group-1 flex flex-col">
-                  <span class="color-white">INDIE WORLD</span>
-                  <span class="color-gray">커뮤니티 사이트</span>
-                </div>
-                <div class="txt-container flex flex-col">
-                  <div class="txt-group-2 flex flex-col">
-                    <span class="color-white">작업 기간</span>
-                    <span class="color-gray">1달</span>
-                  </div>
-                  <div class="txt-group-3 flex flex-col">
-                    <span class="color-white">설명</span>
-                    <span class="color-gray">자바 JSP SERVLET으로 제작. MVC 구조. 인디 게임에 관한 정보와 자료를 공유하고 이야기를 나누는 커뮤니티 사이트입니다.</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="txt-group-1 flex flex-col">
-                  <span class="color-white">AUDICTIONARY</span>
-                  <span class="color-gray">비대면 오디션 서비스 앱</span>
-                </div>
-                <div class="txt-container flex flex-col">
-                  <div class="txt-group-2 flex flex-col">
-                    <span class="color-white">작업 기간</span>
-                    <span class="color-gray">3달</span>
-                  </div>
-                  <div class="txt-group-3 flex flex-col">
-                    <span class="color-white">설명</span>
-                    <span class="color-gray">VUE3, IONIC FRAMEWORK로 제작. 영화 제작자용 버전 개발. 비대면으로 영화 오디션 공고를 올리고 지원자들의 지원을 받아 오디션을 볼 수 있습니다.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- section-5 contact -->
-    <section id="section-5">
-      <div class="container">
-        <div class="con-min-width">
-          <div class="flex flex-col">
-            <div class="title color-gray">Contact</div>
-            <div class="contact flex">
-              <div class="info-box flex flex-col">
-                <div class="flex flex-col txt-box">
-                  <span class="color-white">EMAIL</span>
-                  <span class="color-gray">cdbitmana@gmail.com</span>
-                </div>
-                <div class="flex flex-col txt-box">
-                  <span class="color-white">PHONE</span>
-                  <span class="color-gray">010 6710 8114</span>
-                </div>
-                <div class="flex flex-col txt-box">
-                  <span class="color-white">ADDRESS</span>
-                  <span class="color-gray">대전광역시 서구 관저동</span>
-                </div>
-              </div>
-              <div class="flex flex-col form-box relative">
-                <div class="flex input-box-1">
-                  <div>
-                    <input id="username" type="text" placeholder="Name">
-                  </div>
-                  <div class="relative">
-                    <input id="useremail" type="email" placeholder="* Email">
-                    <span id="emailCheck" class="absolute">이메일 형식으로 입력하세요.</span>
-                  </div>
-                  <div class="relative">
-                    <input id="userphone" type="tel" maxlength="12" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="* Phone">
-                    <span id="phoneCheck" class="absolute">전화번호 형식으로 입력하세요.</span>
-                  </div>
-                </div>
-                <div class="input-box-2">
-                  <div class="relative">
-                    <textarea name="" id="usermsg" cols="30" rows="10" placeholder="* Message"></textarea>
-                    <span id="msgCheck" class="absolute">내용을 입력하세요.</span>
-                  </div>
-                </div>
-                <div class="flex input-box-3 relative">
-                  <div id="btn-submit" class="relative">
-                    <div class="relative">
-                      <i class="fas fa-paper-plane"></i>
-                      <span>메시지 보내기</span>
+                  <div class="txt-container flex flex-col">
+                    <div class="txt-group-2 flex flex-col">
+                      <span class="color-white">작업 기간</span>
+                      <span class="color-gray">2달</span>
+                    </div>
+                    <div class="txt-group-3 flex flex-col">
+                      <span class="color-white">설명</span>
+                      <span class="color-gray">자바를 이용해 HTML, CSS, JS 파일을 생성. 블로그에는 교육 기간 중 배웠던 내용들을 정리했습니다.</span>
                     </div>
                   </div>
-                  <div id="msg-sent" class="flex jc-c ai-c">
-                    <span></span>
-                    <span id="loading" class="loading"></span>
+                </div>
+                <div>
+                  <div class="txt-group-1 flex flex-col">
+                    <span class="color-white">INDIE WORLD</span>
+                    <span class="color-gray">커뮤니티 사이트</span>
+                  </div>
+                  <div class="txt-container flex flex-col">
+                    <div class="txt-group-2 flex flex-col">
+                      <span class="color-white">작업 기간</span>
+                      <span class="color-gray">1달</span>
+                    </div>
+                    <div class="txt-group-3 flex flex-col">
+                      <span class="color-white">설명</span>
+                      <span class="color-gray">자바 JSP SERVLET으로 제작. MVC 구조. 인디 게임에 관한 정보와 자료를 공유하고 이야기를 나누는 커뮤니티 사이트입니다.</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="txt-group-1 flex flex-col">
+                    <span class="color-white">AUDICTIONARY</span>
+                    <span class="color-gray">비대면 오디션 서비스 앱</span>
+                  </div>
+                  <div class="txt-container flex flex-col">
+                    <div class="txt-group-2 flex flex-col">
+                      <span class="color-white">작업 기간</span>
+                      <span class="color-gray">3달</span>
+                    </div>
+                    <div class="txt-group-3 flex flex-col">
+                      <span class="color-white">설명</span>
+                      <span class="color-gray">VUE3, IONIC FRAMEWORK로 제작. 영화 제작자용 버전 개발. 비대면으로 영화 오디션 공고를 올리고 지원자들의 지원을 받아 오디션을 볼 수 있습니다.</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="map-container relative flex jc-c ai-c">
-              <!-- 카카오 지도 -->
-              <div id="map"></div>
-              <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
-              <div class="custom_zoomcontrol radius_border"> 
-                <span onclick="zoomIn()" class="flex jc-c ai-c"><i class="fas fa-plus"></i></span>  
-                <span onclick="zoomOut()" class="flex jc-c ai-c"><i class="fas fa-minus"></i></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- section-5 contact -->
+      <section id="section-5">
+        <div class="container">
+          <div class="con-min-width">
+            <div class="flex flex-col">
+              <div class="color-gray">
+                <span class="title">Contact</span>
               </div>
-              <!-- 마커로 이동 컨트롤 -->
-              <div onclick="setCenter()" class="custom_markercontrol radius_border"><span>가운데로 이동</span></div>
+              <div class="contact flex">
+                <div class="info-box flex flex-col">
+                  <div class="flex flex-col txt-box">
+                    <span class="color-white">EMAIL</span>
+                    <span class="color-gray">cdbitmana@gmail.com</span>
+                  </div>
+                  <div class="flex flex-col txt-box">
+                    <span class="color-white">PHONE</span>
+                    <span class="color-gray">010 6710 8114</span>
+                  </div>
+                  <div class="flex flex-col txt-box">
+                    <span class="color-white">ADDRESS</span>
+                    <span class="color-gray">대전광역시 서구 관저동</span>
+                  </div>
+                </div>
+                <div class="flex flex-col form-box relative">
+                  <div class="flex input-box-1">
+                    <div>
+                      <input id="username" type="text" placeholder="Name">
+                    </div>
+                    <div class="relative">
+                      <input id="useremail" type="email" placeholder="* Email">
+                      <span id="emailCheck" class="absolute">이메일 형식으로 입력하세요.</span>
+                    </div>
+                    <div class="relative">
+                      <input id="userphone" type="tel" maxlength="12" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="* Phone">
+                      <span id="phoneCheck" class="absolute">전화번호 형식으로 입력하세요.</span>
+                    </div>
+                  </div>
+                  <div class="input-box-2">
+                    <div class="relative">
+                      <textarea name="" id="usermsg" cols="30" rows="10" placeholder="* Message"></textarea>
+                      <span id="msgCheck" class="absolute">내용을 입력하세요.</span>
+                    </div>
+                  </div>
+                  <div class="flex input-box-3 relative">
+                    <div id="btn-submit" class="relative">
+                      <div class="relative">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>메시지 보내기</span>
+                      </div>
+                    </div>
+                    <div id="msg-sent" class="flex jc-c ai-c">
+                      <span></span>
+                      <span id="loading" class="loading"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="map-container relative flex jc-c ai-c">
+                <!-- 카카오 지도 -->
+                <div id="map"></div>
+                <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+                <div class="custom_zoomcontrol radius_border"> 
+                  <span onclick="zoomIn()" class="flex jc-c ai-c"><i class="fas fa-plus"></i></span>  
+                  <span onclick="zoomOut()" class="flex jc-c ai-c"><i class="fas fa-minus"></i></span>
+                </div>
+                <!-- 마커로 이동 컨트롤 -->
+                <div onclick="setCenter()" class="custom_markercontrol radius_border"><span>가운데로 이동</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container">
+      <div class="con-min-width">
+        <div class="flex color-gray">
+          <div>
+            <span>Ⓒ Copyrights portfolio.hailrain.site <span id="cr-year"></span>.</span>
+            <span>All Rights Reserved.</span>
+          </div>
+          <div class="flex ai-c">
+            <span>Newsletter Signup</span>
+            <div class="flex relative ai-c">
+              <input type="text" placeholder="Email">
+              <i class="fas fa-envelope"></i>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </footer>
+</div>
 
-</main>
-
-<!-- 푸터 -->
-<footer>
-  <div class="container">
-    <div class="con-min-width">
-      <div class="flex color-gray">
+<div id="popup-1" class="popup">
+  <div class="popup-content flex flex-col relative">
+    <div id="btn-close-popup" class="fixed flex jc-c ai-c btn-close color-theme"><i class="fas fa-times"></i></div>
+    <div class="popup-sum flex flex-col">
+      <div class="flex flex-col color-white popup-title">
         <div>
-          <span>Ⓒ Copyrights portfolio.hailrain.site <span id="cr-year"></span></span>.
-          <span>All Rights Reserved.</span>
+          <span class="title">DLOG</span>
         </div>
-        <div class="flex ai-c">
-          <span>Newsletter Signup</span>
-          <div class="flex relative ai-c">
-            <input type="text" placeholder="Email">
-            <i class="fas fa-envelope"></i>
+      </div>
+      <div class="flex flex-col popup-sum-detail">
+        <div class="flex flex-col popup-title">
+          <span class="subtitle color-white">프로젝트 개요</span>
+          <span class="subtitle-eng color-gray">Project Overview</span>
+        </div>
+        <div class="flex">
+          <ul class="color-white">
+            <li class="flex"><span class="color-gray">프로젝트 설명</span><span>공부 기록 개인 블로그</span></li>
+            <li class="flex"><span class="color-gray">프로젝트 제작 기간</span><span>2020.10 - 2020.12 (2개월)</span></li>
+            <li class="flex"><span class="color-gray">프로젝트 유형</span><span>웹 사이트 제작</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup-goal popup-category color-white">
+        <div class="flex flex-col popup-title">
+          <span class="subtitle">프로젝트 목표</span>
+          <span class="subtitle-eng color-gray">Project Goal</span>
+        </div>
+        <div class="flex popup-goal-detail">
+          <div class="flex flex-col">
+            <span class="material-icons-outlined color-theme">
+              local_library
+              </span>
+              <span>
+                공부 기록
+              </span>
+              <span class="color-gray">
+                공부하며 배운 지식들을 기록하고 찾아보는 용도
+              </span>
+          </div>
+          <div class="flex flex-col">
+            <span class="material-icons-outlined color-theme">
+              web
+              </span>
+              <span>
+                웹 페이지 제작
+              </span>
+              <span class="color-gray">
+                JAVA를 이용해 HTML, CSS, JS 파일 생성
+              </span>
+          </div>
+          <div class="flex flex-col">
+            <i class="fab fa-github color-theme"></i>
+              <span>
+                GITHUB 배포
+              </span>
+              <span class="color-gray">
+                GITHUB의 커스텀 도메인 활용해 배포
+              </span>
+          </div>
+        </div>
+      </div>
+      <div class="popup-theme popup-category color-white">
+        <div class="flex flex-col popup-title">
+          <span class="subtitle">컬러 / 폰트</span>
+          <span class="subtitle-eng color-gray">Color / Font</span>
+        </div>
+        <div class="flex">
+          <div class="flex flex-col">
+            <div class="color-box"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</footer>
+</div>
 
 </body>
 

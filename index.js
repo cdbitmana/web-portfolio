@@ -19,7 +19,7 @@ gsap.from('#section-2 .container .txt-main div span span', {
 /* 헤더 배경색 */
 gsap.to('#header', {
   scrollTrigger: {
-    trigger: "#header-point",
+    trigger: '#section-1 .txt-group',
     //markers: true,
     start: "top 25%",
     end: "bottom+=150 0%",
@@ -250,9 +250,7 @@ document.getElementById('btn-menu-overlay').addEventListener('click', function (
 /* 메뉴 버튼 클릭 효과 */
 document.getElementById('btn-menu').addEventListener('click', function () {
   document.getElementById('menu-effect-open').style.zIndex = 55; // 메뉴 여는 이펙트 보이기
-  document.getElementById('top').style.height = 0; // 원래 화면 숨기기
-  document.getElementById('top').style.overflow = 'hidden'; // 원래 화면 숨기기
-
+  
   // 메뉴 페이지 보이기 (1초 후에)
   setTimeout(function () {
     document.getElementById('menu-page').style.zIndex = 49;
@@ -281,9 +279,7 @@ document.getElementById('btn-menu-close').addEventListener('click', function () 
   document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
   document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
   document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
-  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
-  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
-
+  
   // 메뉴 닫는 이펙트, 메뉴 페이지 숨기기
   setTimeout(function () {
     document.getElementById('menu-effect-open').style.zIndex = -1;
@@ -304,8 +300,6 @@ document.getElementById('move-01').addEventListener('click', function () {
   document.getElementById('btn-menu').style.display = 'block'; // 메뉴 버튼 보이기
   document.getElementById('btn-menu-close').style.display = 'none'; // 메뉴 닫기 버튼 숨기기
   document.getElementById('menu-effect-close').style.zIndex = 55; // 메뉴 닫는 이펙트 보이기
-  document.getElementById('top').style.height = 'initial'; // 원래 화면 보이기
-  document.getElementById('top').style.overflow = 'visible'; // 원래 화면 보이기
   
   // 메뉴 이펙트, 메뉴 페이지 숨기기, 선택 위치로 페이지 스크롤 이동
   setTimeout(function () {
@@ -606,7 +600,7 @@ document.getElementById('cr-year').innerText = year;
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 var options = { //지도를 생성할 때 필요한 기본 옵션
   center: new kakao.maps.LatLng(36.296223, 127.342619), //지도의 중심좌표.
-  level: 2, //지도의 레벨(확대, 축소 정도)
+  level: 3, //지도의 레벨(확대, 축소 정도)
   disableDoubleClick : true,
   disableDoubleClickZoom : true
 };
@@ -653,3 +647,22 @@ function setCenter() {
   map.panTo(moveLatLon);
 }
 /* kakao map api */
+
+/* popup */
+document.getElementById('popup-open-1').addEventListener('click', function () {
+  
+  document.querySelector('body').style.overflow = 'hidden';
+  
+  document.getElementById('popup-1').style.display = 'block';
+
+  
+})
+
+document.getElementById('btn-close-popup').addEventListener('click', function () {
+  
+  document.querySelector('body').style.overflow = 'hidden scroll';
+  
+  document.getElementById('popup-1').style.display = 'none';
+
+})
+/* popup */

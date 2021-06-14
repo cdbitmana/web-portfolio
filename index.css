@@ -81,10 +81,14 @@
   background-color: var(--bg-theme);
 }
 /* 텍스트 셀렉트 박스 */
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
 }
+
 
 body {
   margin: 0;
@@ -222,7 +226,7 @@ ul, li {
   transition: all 0.7s;
   border-bottom-left-radius: 100px;
   position: absolute;
-  left: 125px;
+  right: 20px;
   bottom: -5px;
 }
 
@@ -235,7 +239,7 @@ ul, li {
   transition: all 0.7s;
   border-top-right-radius: 100px;
   position: absolute;
-  left: 160px;
+  right: 0;
   bottom: -5px;
 }
 /* 라이브러리 */
@@ -248,7 +252,7 @@ header {
 }
 
 header .container {
-  padding: 4px 0;
+  padding: 12px 0;
   align-items: center;
 }
 
@@ -538,7 +542,7 @@ header .menu-right ul li span {
   transform: translateY(-50%);
   transition: all 1s;
   cursor: pointer;
-  z-index: 50;
+  z-index: 52;
 }
 
 .side-menu {
@@ -550,7 +554,7 @@ header .menu-right ul li span {
   background-color: #1d1e20;
   transform: translate(260px,-50%);
   transition: all 1s;
-  z-index: 50;
+  z-index: 52;
 }
 
 .side-menu li {
@@ -870,32 +874,6 @@ header .menu-right ul li span {
 #section-2 .container .txt-box {
   font-size: 45px;
   font-family: 'Nunito', sans-serif;
-}
-
-#section-2 .container .txt-box::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 4px;
-  background-color: var(--bg-theme);
-  transition: all 0.7s;
-  border-bottom-left-radius: 100px;
-  position: absolute;
-  left: 125px;
-  bottom: -5px;
-}
-
-#section-2 .container .txt-box::after {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 4px;
-  background-color: var(--bg-theme);
-  transition: all 0.7s;
-  border-top-right-radius: 100px;
-  position: absolute;
-  left: 160px;
-  bottom: -5px;
 }
 
 @media (max-width: 600px) {
@@ -1715,3 +1693,133 @@ footer .container > div > div > div:nth-child(2) i {
   }
 }
 /* footer */
+
+/* popup */
+/* 기존 페이지가 스크롤 되지 않게 막음 */
+.not-scroll {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 51;
+  overflow-x: hidden;
+}
+
+.popup-content {
+  width: 100%;
+  height: 100%;
+  padding: 70px 100px 50px 100px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+@media (max-width: 960px) {
+  .popup-content {
+    padding: 70px 20px 50px 20px;
+  }
+}
+
+.popup-content .btn-close {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  top: 30px;
+  left: 50%;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.popup .popup-content .popup-category {
+  margin-bottom: 100px;
+}
+
+.popup .popup-content .popup-title {
+  margin-bottom: 100px;
+}
+
+.popup .popup-content .popup-sum {
+  margin-bottom: 30px;
+}
+
+.popup .popup-content .popup-sum .popup-title {
+  margin-bottom: 30px;
+}
+
+.popup .popup-content .subtitle {
+  font-size: 26px;
+}
+
+.popup .popup-content .subtitle-eng {
+  font-size: 13px;
+}
+
+.popup .popup-content .popup-sum .popup-title > div {
+  margin-bottom: 60px;
+}
+
+.popup .popup-content .popup-sum .popup-sum-detail {
+  margin-bottom: 80px;
+}
+
+.popup .popup-content .popup-sum .popup-sum-detail ul li span:nth-child(1) {
+  width: 150px;
+}
+
+@media (max-width: 960px) {
+  .popup .popup-content .popup-sum .popup-sum-detail ul li{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.popup .popup-content .popup-goal-detail {
+  margin-bottom: 60px;
+  justify-content: space-around;
+}
+
+.popup .popup-content .popup-goal-detail > div {
+  text-align: center;
+}
+
+.popup .popup-content .popup-goal-detail > div > span,
+.popup .popup-content .popup-goal-detail > div > i {
+  padding: 10px 0;
+}
+
+.popup .popup-content .popup-goal-detail > div > span:nth-child(1),
+.popup .popup-content .popup-goal-detail > div > i:nth-child(1) {
+  font-size: 80px;
+}
+
+@media (max-width: 960px) {
+  .popup .popup-content .popup-goal-detail {
+    flex-direction: column;
+  }
+
+  .popup .popup-content .popup-goal-detail > div {
+    margin-bottom: 20px;
+  }
+}
+
+.popup .popup-content .popup-sum .popup-goal-detail > div > span:nth-child(2) {
+  font-size: 18px;
+}
+
+.popup .popup-content .popup-sum .popup-goal-detail > div > span:nth-child(3) {
+  font-size: 14px;
+}
+/* popup */
