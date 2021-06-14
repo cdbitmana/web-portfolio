@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HailRain</title>
 
+  <!-- kakao map api -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1fd478981bd2cab6591e68e05ac38c62"></script>
+
   <link rel="stylesheet" href="index.css">
   <script src="index.js" defer></script>
   <!-- FontAwesome -->
@@ -67,6 +70,8 @@
 </head>
 
 <body id="top">
+
+  
 
   <!-- 헤더 -->
   <header id="header" class="fixed">
@@ -446,6 +451,17 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="map-container relative flex jc-c ai-c">
+              <!-- 카카오 지도 -->
+              <div id="map"></div>
+              <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+              <div class="custom_zoomcontrol radius_border"> 
+                <span onclick="zoomIn()" class="flex jc-c ai-c"><i class="fas fa-plus"></i></span>  
+                <span onclick="zoomOut()" class="flex jc-c ai-c"><i class="fas fa-minus"></i></span>
+              </div>
+              <!-- 마커로 이동 컨트롤 -->
+              <div onclick="setCenter()" class="custom_markercontrol radius_border"><span>가운데로 이동</span></div>
             </div>
           </div>
         </div>
