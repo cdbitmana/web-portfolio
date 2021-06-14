@@ -395,6 +395,11 @@ header .menu-right ul li span {
   border: 1px solid rgb(157,161,165);
   z-index: 555;
   color: white;
+  transition: all .5s;
+}
+
+#btn-scrollTop:hover {
+  color: var(--bg-theme);
 }
 /* scrollTop Button */
 
@@ -1178,13 +1183,22 @@ header .menu-right ul li span {
 }
 
 #section-4 .container .portfolio-box-1 a div:nth-child(1) {
-  font-size: 26px;
+  font-size: 40px;
   margin-bottom: 10px;
   transition: all .5s;
 }
 
+#section-4 .container .portfolio-box-1 a div:nth-child(2) {
+  font-size: 25px;
+}
+
 #section-4 .container .portfolio-box-1 a div:nth-child(3) {
-  font-size: 20px;
+  font-size: 14px;
+}
+
+#section-4 .container .portfolio-txt {
+  margin-top: 8px;
+  margin-left: 6px;
 }
 
 #section-4 .container .portfolio-box-1 a:not(:nth-child(3))::after {
@@ -1481,6 +1495,10 @@ header .menu-right ul li span {
   background-color: rgb(34,34,34);
 }
 
+#section-5 .container .form-box .input-box-3 > div#btn-submit i {
+  margin-right: 5px;
+}
+
 @media (max-width:700px) {
   #section-5 .container .form-box .input-box-3 > div {
     padding: 10px 10px 10px 10px;
@@ -1564,12 +1582,12 @@ header .menu-right ul li span {
 
 #map {
   width: 100%;
-  height: 500px;
+  height: 400px;
 }
 
 @media (max-width: 960px) {
   #map {
-    height: 350px;
+    height: 300px;
   }
 }
 
@@ -1623,6 +1641,17 @@ header .menu-right ul li span {
   color: white;
   background-color: var(--bg-theme);
 }
+
+@media (max-width: 960px) {
+  .custom_zoomcontrol {
+    left: 10px;
+  }
+
+  .custom_markercontrol {
+    left: 10px;
+    right: auto;
+  }
+}
 /* section-5 contact */
 
 /* footer */
@@ -1653,10 +1682,13 @@ footer .container > div > div > div:nth-child(2) > span {
 
 footer .container > div > div > div:nth-child(2) input {
   background-color: rgb(34,34,34);
-  border-color: rgba(255,255,255, 0.1);
-  outline: 1px solid var(--bg-theme);
+  border-color: rgba(255,255,255, 0.1); 
   color: white;
   padding: 10px 8px;
+}
+
+footer .container > div > div > div:nth-child(2) input:focus {
+  outline: 1px solid var(--bg-theme);
 }
 
 footer .container > div > div > div:nth-child(2) i {

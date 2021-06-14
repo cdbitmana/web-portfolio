@@ -656,6 +656,11 @@ var marker = new kakao.maps.Marker({
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
 
+// 마커에 클릭이벤트를 등록합니다
+kakao.maps.event.addListener(marker, 'click', function() {
+  setCenter();
+});
+
 window.addEventListener('resize', function () {
   var center = new kakao.maps.LatLng(36.296223, 127.342619); //지도의 중심좌표.
   map.setCenter(center);
