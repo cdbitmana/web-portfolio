@@ -552,7 +552,7 @@ header .menu-right ul li span {
   right: 0;
   padding: 60px 10px 60px 10px;
   background-color: #1d1e20;
-  transform: translate(260px,-50%);
+  transform: translate(240px,-50%);
   transition: all 1s;
   z-index: 52;
 }
@@ -617,7 +617,7 @@ header .menu-right ul li span {
 
 .side-menu > div:nth-child(2) > ul > li {
   float: left;
-  width: calc((240px - 32px) / 2);
+  width: calc( (220px - 40px) / 2 );
   height: 46px;
   margin:0 8px 0 8px;
   padding: 0 10px;
@@ -1714,15 +1714,14 @@ footer .container > div > div > div:nth-child(2) i {
   height: 100%;
   background-color: rgba(0,0,0,0.8);
   z-index: 51;
-  overflow-x: hidden;
 }
 
 .popup-content {
   width: 100%;
   height: 100%;
-  padding: 70px 100px 50px 100px;
+  margin: 70px 0;
+  padding: 0 100px;
   overflow: scroll;
-  overflow-x: hidden;
 }
 
 @media (max-width: 960px) {
@@ -1735,7 +1734,7 @@ footer .container > div > div > div:nth-child(2) i {
   font-size: 20px;
   width: 30px;
   height: 30px;
-  top: 30px;
+  top: 20px;
   left: 50%;
   background-color: white;
   border-radius: 50%;
@@ -1792,6 +1791,7 @@ footer .container > div > div > div:nth-child(2) i {
 }
 
 .popup .popup-content .popup-goal-detail > div {
+  width: 30%;
   text-align: center;
 }
 
@@ -1820,6 +1820,55 @@ footer .container > div > div > div:nth-child(2) i {
 }
 
 .popup .popup-content .popup-sum .popup-goal-detail > div > span:nth-child(3) {
+  font-size: 14px;
+}
+
+.popup .popup-content .popup-theme-color {
+  justify-content: space-around;
+}
+
+.popup .popup-content .popup-theme-color > div {
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.popup .popup-content .color-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#popup-1 .popup-theme-color .popup-theme-color-detail {
+  width: 30%;
+}
+
+#popup-1 .popup-theme-color > div:nth-child(1) .color-box {
+  background-color: #f8875a;
+}
+
+#popup-1 .popup-theme-color > div:nth-child(2) .color-box {
+  background-color: rgb(255,255,0);
+}
+
+#popup-1 .popup-theme-color > div:nth-child(3) .color-box {
+  background-color: #8482FF;
+}
+
+#popup-1 .popup-theme-color .color-txt-box > ul {
+  margin-bottom: 20px;
+}
+
+#popup-1 .popup-theme-color .color-txt-box > ul > li > span {
+  padding: 0 5px;
+}
+
+#popup-1 .popup-theme-color .color-txt-box > ul > li > span:nth-child(1) {
+  font-weight: 700;
+}
+
+#popup-1 .popup-theme-color .color-txt-box > ul > li > span:nth-child(2) {
   font-size: 14px;
 }
 /* popup */

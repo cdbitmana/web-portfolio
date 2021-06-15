@@ -445,12 +445,12 @@ var ColorPalleteIsOpened = false;
 document.getElementById('btn-side-menu').addEventListener('click', function () {
   if (ColorPalleteIsOpened == false) {
     document.getElementById('side-menu').style.transform = 'translate(0,-50%)';
-    document.getElementById('btn-side-menu').style.transform = 'translate(-260px,-50%)';
+    document.getElementById('btn-side-menu').style.transform = 'translate(-240px,-50%)';
     ColorPalleteIsOpened = true;
     return;
   }
   if (ColorPalleteIsOpened == true) {
-    document.getElementById('side-menu').style.transform = 'translate(260px,-50%)';
+    document.getElementById('side-menu').style.transform = 'translate(240px,-50%)';
     document.getElementById('btn-side-menu').style.transform = 'translate(0,-50%)';
     ColorPalleteIsOpened = false;
     return;
