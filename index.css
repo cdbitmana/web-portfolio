@@ -76,6 +76,53 @@
 }
 /* GOOGLE Material ICONS */
 
+/* 폰트 */
+@font-face {
+  font-family: 'SDSamliphopangche_Outline';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-samlip {
+  font-family: 'SDSamliphopangche_Outline';
+}
+
+@font-face {
+  font-family: 'Recipekorea';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-recipe {
+  font-family: 'Recipekorea';
+}
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 300;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+.font-lotte {
+ font-family: 'LotteMartDream', sans-serif;
+}
+/* 폰트 */
+
+
 /* 텍스트 셀렉트 박스 */
 ::selection {
   background-color: var(--bg-theme);
@@ -1742,6 +1789,15 @@ footer .container > div > div > div:nth-child(2) i {
   cursor: pointer;
 }
 
+.popup-content .btn-close i {
+  transition: transform 1s;
+  transform: rotate(0deg);
+}
+
+.popup-content .btn-close:hover i {
+  transform: rotate(360deg);
+}
+
 .popup .popup-content .popup-category {
   margin-bottom: 100px;
 }
@@ -1826,6 +1882,7 @@ footer .container > div > div > div:nth-child(2) i {
 
 .popup .popup-content .popup-theme-color {
   justify-content: space-around;
+  margin-bottom: 130px;
 }
 
 .popup .popup-content .popup-theme-color > div {
@@ -1871,6 +1928,47 @@ footer .container > div > div > div:nth-child(2) i {
 
 .popup .popup-theme-color .color-txt-box > ul > li > span:nth-child(2) {
   font-size: 14px;
+}
+
+.popup .pop-theme-font {
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.popup .pop-theme-font .pop-theme-font-detail {
+  width: 60%;
+}
+
+.popup .pop-theme-font .pop-theme-font-detail span {
+  display: inline-block;
+  width: 100%;
+}
+
+.popup .pop-theme-font .pop-theme-font-example {
+  width: 40%;
+}
+
+.popup .pop-theme-font .pop-theme-font-example span {
+  padding: 10px 0;
+}
+
+@media (max-width: 960px) {
+  .popup .pop-theme-font {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .popup .pop-theme-font .pop-theme-font-detail {
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+
+  .popup .pop-theme-font .pop-theme-font-example {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 .popup .popup-img-container {

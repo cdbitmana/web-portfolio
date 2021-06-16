@@ -650,19 +650,32 @@ function setCenter() {
 
 /* popup */
 document.getElementById('popup-open-1').addEventListener('click', function () {
-  
   document.querySelector('body').style.overflow = 'hidden';
-  
   document.getElementById('popup-1').style.display = 'block';
-
-  
 })
 
-document.getElementById('btn-close-popup').addEventListener('click', function () {
-  
-  document.querySelector('body').style.overflow = 'hidden scroll';
-  
-  document.getElementById('popup-1').style.display = 'none';
+document.getElementById('popup-open-2').addEventListener('click', function () {
+  document.querySelector('body').style.overflow = 'hidden';
+  document.getElementById('popup-2').style.display = 'block';
+})
 
+document.getElementById('popup-open-3').addEventListener('click', function () {
+  document.querySelector('body').style.overflow = 'hidden';
+  document.getElementById('popup-3').style.display = 'block';
+})
+
+document.getElementById('btn-close-popup-1').addEventListener('click', function () {
+  document.querySelector('body').style.overflow = 'hidden scroll';
+  document.getElementById('popup-1').style.display = 'none';
+})
+
+document.getElementById('btn-close-popup-2').addEventListener('click', function () {
+  document.querySelector('body').style.overflow = 'hidden scroll';
+  document.getElementById('popup-2').style.display = 'none';
+})
+
+document.getElementById('btn-close-popup-3').addEventListener('click', function () {
+  document.querySelector('body').style.overflow = 'hidden scroll';
+  document.getElementById('popup-3').style.display = 'none';
 })
 /* popup */
