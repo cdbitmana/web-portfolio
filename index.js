@@ -649,33 +649,21 @@ function setCenter() {
 /* kakao map api */
 
 /* popup */
-document.getElementById('popup-open-1').addEventListener('click', function () {
-  document.querySelector('body').style.overflow = 'hidden';
-  document.getElementById('popup-1').style.display = 'block';
-})
+document.querySelectorAll('a.btn-popup-open').forEach(
+  function (e) {
+    e.addEventListener('click', function () {
+      document.querySelector('body').style.overflow = 'hidden';
+      document.getElementById('popup-'+e.id.split("-")[2]).style.display = 'block';
+    })
+  }
+)
 
-document.getElementById('popup-open-2').addEventListener('click', function () {
-  document.querySelector('body').style.overflow = 'hidden';
-  document.getElementById('popup-2').style.display = 'block';
-})
-
-document.getElementById('popup-open-3').addEventListener('click', function () {
-  document.querySelector('body').style.overflow = 'hidden';
-  document.getElementById('popup-3').style.display = 'block';
-})
-
-document.getElementById('btn-close-popup-1').addEventListener('click', function () {
-  document.querySelector('body').style.overflow = 'hidden scroll';
-  document.getElementById('popup-1').style.display = 'none';
-})
-
-document.getElementById('btn-close-popup-2').addEventListener('click', function () {
-  document.querySelector('body').style.overflow = 'hidden scroll';
-  document.getElementById('popup-2').style.display = 'none';
-})
-
-document.getElementById('btn-close-popup-3').addEventListener('click', function () {
-  document.querySelector('body').style.overflow = 'hidden scroll';
-  document.getElementById('popup-3').style.display = 'none';
-})
+document.querySelectorAll('div.btn-popup-close').forEach(
+  function (e) {
+    e.addEventListener('click', function () {
+      document.querySelector('body').style.overflow = 'hidden scroll';
+      document.getElementById('popup-'+e.id.split("-")[3]).style.display = 'none';
+    })
+  }
+)
 /* popup */

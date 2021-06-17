@@ -347,17 +347,17 @@
                 <span class="title">Projects</span>
               </div>
               <div class="flex portfolio-box-1">
-                <a id="popup-open-1" href="javascript:void(0)">
+                <a id="popup-open-1" href="javascript:void(0)" class="btn-popup-open">
                   <div class="color-gray">WEB</div>
                   <div class="color-white">DLOG</div>
                   <div class="color-gray">개인 블로그</div>
                 </a>
-                <a id="popup-open-2" href="javascript:void(0)">
+                <a id="popup-open-2" href="javascript:void(0)" class="btn-popup-open">
                   <div class="color-gray">WEB</div>
                   <div class="color-white">INDIE WORLD</div>
                   <div class="color-gray">커뮤니티 사이트</div>
                 </a>
-                <a id="popup-open-3" href="javascript:void(0)">
+                <a id="popup-open-3" href="javascript:void(0)" class="btn-popup-open">
                   <div class="color-gray">APP</div>
                   <div class="color-white">AUDICTIONARY</div>
                   <div class="color-gray">비대면 오디션 서비스 앱</div>
@@ -526,7 +526,7 @@
   <!-- popup-1 -->
   <div id="popup-1" class="popup">
     <div class="popup-content relative">
-      <div id="btn-close-popup-1">
+      <div id="btn-close-popup-1" class="btn-popup-close">
         <div class="fixed flex jc-c ai-c btn-close color-theme">
           <i class="fas fa-times"></i>
         </div>
@@ -659,7 +659,7 @@
   <!-- popup-2 -->
   <div id="popup-2" class="popup">
     <div class="popup-content relative">
-      <div id="btn-close-popup-2">
+      <div id="btn-close-popup-2"  class="btn-popup-close">
         <div class="fixed flex jc-c ai-c btn-close color-theme">
           <i class="fas fa-times"></i>
         </div>
@@ -765,6 +765,116 @@
     </div>
   </div>
   <!-- popup-2 -->
+
+  <!-- popup-3 -->
+  <div id="popup-3" class="popup">
+    <div class="popup-content relative">
+      <div id="btn-close-popup-3"  class="btn-popup-close">
+        <div class="fixed flex jc-c ai-c btn-close color-theme">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="popup-sum flex flex-col">
+        <div class="flex flex-col color-white popup-title">
+          <div>
+            <span class="title">AUDICTIONARY (PD)</span>
+          </div>
+        </div>
+        <div class="flex flex-col popup-sum-detail">
+          <div class="flex flex-col popup-title">
+            <span class="subtitle color-white">프로젝트 개요</span>
+            <span class="subtitle-eng color-gray">Project Overview</span>
+          </div>
+          <div class="flex">
+            <ul class="color-white">
+              <li class="flex"><span class="color-gray">프로젝트 설명</span><span>인디게임 커뮤니티 사이트</span></li>
+              <li class="flex"><span class="color-gray">프로젝트 제작 기간</span><span>2020.12 - 2021.2 (2개월)</span></li>
+              <li class="flex"><span class="color-gray">프로젝트 유형</span><span>웹 사이트 제작</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup-goal popup-category color-white">
+          <div class="flex flex-col popup-title">
+            <span class="subtitle">프로젝트 목표</span>
+            <span class="subtitle-eng color-gray">Project Goal</span>
+          </div>
+          <div class="flex popup-goal-detail">
+            <div class="flex flex-col">
+              <span class="material-icons-outlined color-theme">
+                forum
+              </span>
+              <span>
+                커뮤니티
+              </span>
+              <span class="color-gray">
+                인디 게임에 대한 자료와 소식을 공유하고 이야기를 나누는 공간
+              </span>
+            </div>
+            <div class="flex flex-col">
+              <span class="material-icons-outlined color-theme">
+                web
+              </span>
+              <span>
+                웹 사이트 제작
+              </span>
+              <span class="color-gray">
+                JSP, SERVLET을 이용해 MVC구조로 웹 사이트 제작
+              </span>
+            </div>
+            <div class="flex flex-col">
+              <i class="fab fa-github color-theme"></i>
+              <span>
+                네이버 클라우드 플랫폼 서비스 배포
+              </span>
+              <span class="color-gray">
+                네이버 클라우드 플랫폼의 CentOS환경에서 서버를 구축해 배포
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="popup-theme popup-category color-white">
+          <div class="flex flex-col popup-title">
+            <span class="subtitle">컬러 / 폰트</span>
+            <span class="subtitle-eng color-gray">Color / Font</span>
+          </div>
+          <div class="popup-theme-color flex">
+            <div class="flex flex-col popup-theme-color-detail">
+              <div class="color-box"></div>
+              <div class="flex color-txt-box">
+                <ul>
+                  <li><span>R</span><span>44</span></li>
+                  <li><span>G</span><span>47</span></li>
+                  <li><span>B</span><span>63</span></li>
+                </ul>
+              </div>
+              <span>#2c2f3f</span>
+            </div>
+          </div>
+          <div class="pop-theme-font flex">
+            <div class="pop-theme-font-detail flex jc-c ai-c">
+              <span>대부분의 폰트에서는 깔끔하고 부드러운 느낌을 주는 롯데마트드림체를 사용했습니다. 개성있게 표현하고 싶은 부분에서는 레시피코리아체를 사용했습니다.</span>
+            </div>
+            <div class="pop-theme-font-example flex flex-col jc-c ai-c">
+              <span class="font-recipe">레시피코리아 Recipe</span>
+              <span class="font-lotte">롯데마트드림체 LotteMartDream</span>
+            </div>
+          </div>
+        </div>
+        <div class="popup-function color-white flex flex-col">
+          <div class="flex flex-col popup-title">
+            <span class="subtitle">기능 / 구성</span>
+            <span class="subtitle-eng color-gray">Functions / Configuration</span>
+          </div>
+          <div class="flex popup-func-detail">
+            <div class="popup-img-container">
+              <img src="images/portfolio-2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- popup-3 -->
 
 </body>
 
