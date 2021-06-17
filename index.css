@@ -871,7 +871,7 @@ header .menu-right ul li span {
   border: 3px solid white;
   border-radius: 12px;
   top: 10px;
-  right: -16px;
+  right: -13px;
   animation: mouse 3s ease infinite;
 }
 
@@ -882,7 +882,7 @@ header .menu-right ul li span {
   height: 5px;
   position: absolute;
   top: 5px;
-  right: 11px;
+  right: 8px;
   background-color: white;
 }
 
