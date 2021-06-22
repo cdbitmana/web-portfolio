@@ -14,7 +14,7 @@ gsap.from('#section-2 .container .txt-main div span span', {
   duration: 1,
   stagger: 0.3
 });
-/* 텍스트 하나씩 나타나는 애니메이션 (GSAP) */
+/* 텍스트 하나씩 나타나는 애니메이션 (GSAP) section-1 nametext */
 
 /* 헤더 배경색 */
 gsap.to('#header', {
