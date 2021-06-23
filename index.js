@@ -31,31 +31,12 @@ gsap.to('#header', {
 
 /* 헤더 오버레이 효과 */
 
-var section1height = document.getElementById('section-1').getBoundingClientRect().height;
-var section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -78;
-var section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
-var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
-var section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
-
-window.addEventListener('resize', function () {
-  if (document.body.offsetWidth <= 960) {
-    section1height = document.getElementById('section-1').getBoundingClientRect().height - 135;
-    section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -135;
-    section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -135;
-    section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -135;
-    section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -135;
-    setOverlay;
-  }
-
-  if (document.body.offsetWidth > 960) {
-    section1height = document.getElementById('section-1').getBoundingClientRect().height -78;
-    section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -78;
-    section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
-    section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
-    section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
-    setOverlay;
-  }
-})
+var section1height = document.getElementById('section-1').getBoundingClientRect().height -100;
+var section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height;
+var section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height;
+var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height;
+var section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height;
+console.log(section1height);
 
 window.addEventListener('scroll', setOverlay);
 
