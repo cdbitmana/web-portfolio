@@ -38,11 +38,11 @@ var section5height = section4height + document.getElementById('section-5').getBo
 
 window.addEventListener('resize', function () {
   if (document.body.offsetWidth <= 960) {
-    section1height = document.getElementById('section-1').getBoundingClientRect().height -78;
-    section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -78;
-    section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
-    section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
-    section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
+    section1height = document.getElementById('section-1').getBoundingClientRect().height -135;
+    section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -135;
+    section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -135;
+    section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -135;
+    section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -135;
     setOverlay;
   }
 
