@@ -84,14 +84,14 @@ function setOverlay (curpoint) {
 /* 헤더 오버레이 효과 */
 
 /* 헤더 Right 네비게이션 */
-var menu_overlay_offset = 49;
+var menu_overlay_offset = 45;
 document.getElementById('menu-overlay-1').addEventListener('click', function () {
   var scrollPointEl = document.getElementById('section-1');
   var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
   window.scrollTo({
     top: scrollPoint
   })
-  setOverlay(scrollPoint);
+  
 })
 
 document.getElementById('menu-overlay-2').addEventListener('click', function () {
@@ -100,7 +100,7 @@ document.getElementById('menu-overlay-2').addEventListener('click', function () 
   window.scrollTo({
     top: scrollPoint
   })
-  setOverlay(scrollPoint);
+  
 })
 
 document.getElementById('menu-overlay-3').addEventListener('click', function () {
@@ -109,7 +109,7 @@ document.getElementById('menu-overlay-3').addEventListener('click', function () 
   window.scrollTo({
     top: scrollPoint
   })
-  setOverlay(scrollPoint);
+  
 })
 
 document.getElementById('menu-overlay-4').addEventListener('click', function () {
@@ -118,7 +118,7 @@ document.getElementById('menu-overlay-4').addEventListener('click', function () 
   window.scrollTo({
     top: scrollPoint
   })
-  setOverlay(scrollPoint);
+  
 })
 
 document.getElementById('menu-overlay-5').addEventListener('click', function () {
@@ -127,7 +127,7 @@ document.getElementById('menu-overlay-5').addEventListener('click', function () 
   window.scrollTo({
     top: scrollPoint
   })
-  setOverlay(scrollPoint);
+  
 })
 /* 헤더 Right 네비게이션 */
 
