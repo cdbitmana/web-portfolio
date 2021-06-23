@@ -111,7 +111,7 @@ document.getElementById('menu-overlay-1').addEventListener('click', function () 
 
 document.getElementById('menu-overlay-2').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-2');
-  var offSet = 78;
+  var offSet = 50;
 
   window.scrollTo({
     top: scrollPoint.offsetTop - offSet
