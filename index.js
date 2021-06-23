@@ -291,11 +291,10 @@ document.getElementById('move-01').addEventListener('click', function () {
     document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
     
-    var scrollPoint = document.getElementById('section-1');
-    var offSet = 78;
-
+    var scrollPointEl = document.getElementById('section-1');
+    var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
     window.scrollTo({
-      top: scrollPoint.offsetTop - offSet
+      top: scrollPoint
     })
 
   }, 1000)
@@ -320,13 +319,12 @@ document.getElementById('move-02').addEventListener('click', function () {
     document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
     
-    var scrollPoint = document.getElementById('section-2');
-    var offSet = 78;
-
+    var scrollPointEl = document.getElementById('section-2');
+    var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
     window.scrollTo({
-      top: scrollPoint.offsetTop - offSet
+      top: scrollPoint
     })
-
+    
   }, 1000)
 
   // 메뉴 닫기 이펙트 연출 (1초 동안)
@@ -349,12 +347,12 @@ document.getElementById('move-03').addEventListener('click', function () {
     document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
     
-    var scrollPoint = document.getElementById('section-3');
-    var offSet = 78;
-
+    var scrollPointEl = document.getElementById('section-3');
+    var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
     window.scrollTo({
-      top: scrollPoint.offsetTop - offSet
+      top: scrollPoint
     })
+    
 
   }, 1000)
 
@@ -378,13 +376,12 @@ document.getElementById('move-04').addEventListener('click', function () {
     document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
     
-    var scrollPoint = document.getElementById('section-4');
-    var offSet = 78;
-
+    var scrollPointEl = document.getElementById('section-4');
+    var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
     window.scrollTo({
-      top: scrollPoint.offsetTop - offSet
+      top: scrollPoint
     })
-
+    
   }, 1000)
 
   // 메뉴 닫기 이펙트 연출 (1초 동안)
@@ -407,12 +404,12 @@ document.getElementById('move-05').addEventListener('click', function () {
     document.getElementById('menu-effect-close').style.zIndex = -1;
     document.getElementById('menu-page').style.zIndex = -1;
     
-    var scrollPoint = document.getElementById('section-5');
-    var offSet = 78;
-
+    var scrollPointEl = document.getElementById('section-5');
+    var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
     window.scrollTo({
-      top: scrollPoint.offsetTop - offSet
+      top: scrollPoint
     })
+    
 
   }, 1000)
 
