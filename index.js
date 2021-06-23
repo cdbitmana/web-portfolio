@@ -36,12 +36,12 @@ var section2height = section1height + document.getElementById('section-2').getBo
 var section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height;
 var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height;
 var section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height;
-console.log(section1height);
+
+var curpoint = document.documentElement.scrollTop;
 
 window.addEventListener('scroll', setOverlay);
 
-function setOverlay () {
-  var curpoint = document.documentElement.scrollTop;
+function setOverlay (curpoint) {
   
   if( curpoint < section1height ) {
     document.getElementById('menu-overlay-1').classList.add('color-theme','overlay-sel');
@@ -84,43 +84,48 @@ function setOverlay () {
 /* 헤더 Right 네비게이션 */
 var menu_overlay_offset = 45;
 document.getElementById('menu-overlay-1').addEventListener('click', function () {
-  var scrollPoint = document.getElementById('section-1');
-  
+  var scrollPointEl = document.getElementById('section-1');
+  var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
   window.scrollTo({
-    top: scrollPoint.offsetTop - menu_overlay_offset
+    top: scrollPoint
   })
+  setOverlay(scrollPoint);
 })
 
 document.getElementById('menu-overlay-2').addEventListener('click', function () {
-  var scrollPoint = document.getElementById('section-2');
-
+  var scrollPointEl = document.getElementById('section-2');
+  var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
   window.scrollTo({
-    top: scrollPoint.offsetTop - menu_overlay_offset
+    top: scrollPoint
   })
+  setOverlay(scrollPoint);
 })
 
 document.getElementById('menu-overlay-3').addEventListener('click', function () {
-  var scrollPoint = document.getElementById('section-3');
-
+  var scrollPointEl = document.getElementById('section-3');
+  var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
   window.scrollTo({
-    top: scrollPoint.offsetTop - menu_overlay_offset
+    top: scrollPoint
   })
+  setOverlay(scrollPoint);
 })
 
 document.getElementById('menu-overlay-4').addEventListener('click', function () {
-  var scrollPoint = document.getElementById('section-4');
-
+  var scrollPointEl = document.getElementById('section-4');
+  var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
   window.scrollTo({
-    top: scrollPoint.offsetTop - menu_overlay_offset
+    top: scrollPoint
   })
+  setOverlay(scrollPoint);
 })
 
 document.getElementById('menu-overlay-5').addEventListener('click', function () {
-  var scrollPoint = document.getElementById('section-5');
-
+  var scrollPointEl = document.getElementById('section-5');
+  var scrollPoint = scrollPointEl.offsetTop - menu_overlay_offset;
   window.scrollTo({
-    top: scrollPoint.offsetTop - menu_overlay_offset
+    top: scrollPoint
   })
+  setOverlay(scrollPoint);
 })
 /* 헤더 Right 네비게이션 */
 
@@ -213,8 +218,8 @@ document.getElementById('btn-menu-right').addEventListener('click', function () 
   document.getElementById('btn-menu').style.display = 'none';
   document.getElementById('btn-menu-close').style.display = 'none';
   document.getElementById('menu-right').style.display = 'flex';
-
-  setOverlay();
+  
+  setOverlay(curpoint);
   
 })
 
