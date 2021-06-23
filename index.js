@@ -515,6 +515,7 @@ document.getElementById('btn-scrollTop').addEventListener('click', function () {
   window.scrollTo({
     top: 0
   })
+  curpoint = 0;
 })
 /* ScrollTop Button */
 
