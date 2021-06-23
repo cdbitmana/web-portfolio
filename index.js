@@ -37,14 +37,6 @@ var section3height = section2height + document.getElementById('section-3').getBo
 var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
 var section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -78;
 
-if (document.body.offsetWidth <= 960) {
-  section1height = document.getElementById('section-1').getBoundingClientRect().height;
-  section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -135;
-  section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -135;
-  section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -135;
-  section5height = section4height + document.getElementById('section-5').getBoundingClientRect().height -135;
-}
-
 window.addEventListener('resize', function () {
   if (document.body.offsetWidth <= 960) {
     section1height = document.getElementById('section-1').getBoundingClientRect().height - 135;
