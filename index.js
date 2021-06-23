@@ -82,7 +82,7 @@ function setOverlay () {
 /* 헤더 오버레이 효과 */
 
 /* 헤더 Right 네비게이션 */
-var menu_overlay_offset = 45;
+var menu_overlay_offset = 100;
 document.getElementById('menu-overlay-1').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-1');
   
