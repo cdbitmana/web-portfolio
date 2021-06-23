@@ -39,10 +39,12 @@ var section5height = section4height + document.getElementById('section-5').getBo
 
 var curpoint = document.documentElement.scrollTop;
 
-window.addEventListener('scroll', setOverlay);
+window.addEventListener('scroll', function () {
+  curpoint = document.documentElement.scrollTop;
+  setOverlay(curpoint);
+});
 
 function setOverlay (curpoint) {
-  
   if( curpoint < section1height ) {
     document.getElementById('menu-overlay-1').classList.add('color-theme','overlay-sel');
     document.getElementById('menu-overlay-2').classList.remove('color-theme','overlay-sel');
