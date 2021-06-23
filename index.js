@@ -109,48 +109,47 @@ function setOverlay () {
 /* 헤더 오버레이 효과 */
 
 /* 헤더 Right 네비게이션 */
+var menu_overlay_offset = 78;
+if (document.body.offsetWidth <= 960) {
+  menu_overlay_offset = 135;
+}
 document.getElementById('menu-overlay-1').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-1');
-  var offSet = 78;
-
+  
   window.scrollTo({
-    top: scrollPoint.offsetTop - offSet
+    top: scrollPoint.offsetTop - menu_overlay_offset
   })
 })
 
 document.getElementById('menu-overlay-2').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-2');
-  var offSet = 50;
 
   window.scrollTo({
-    top: scrollPoint.offsetTop - offSet
+    top: scrollPoint.offsetTop - menu_overlay_offset
   })
 })
 
 document.getElementById('menu-overlay-3').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-3');
-  var offSet = 78;
 
   window.scrollTo({
-    top: scrollPoint.offsetTop - offSet
+    top: scrollPoint.offsetTop - menu_overlay_offset
   })
 })
 
 document.getElementById('menu-overlay-4').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-4');
-  var offSet = 78;
 
   window.scrollTo({
-    top: scrollPoint.offsetTop - offSet
+    top: scrollPoint.offsetTop - menu_overlay_offset
   })
 })
 
 document.getElementById('menu-overlay-5').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-5');
-  var offSet = 78;
 
   window.scrollTo({
-    top: scrollPoint.offsetTop - offSet
+    top: scrollPoint.offsetTop - menu_overlay_offset
   })
 })
 /* 헤더 Right 네비게이션 */
