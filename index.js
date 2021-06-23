@@ -102,9 +102,6 @@ function setOverlay () {
 
 /* 헤더 Right 네비게이션 */
 var menu_overlay_offset = 78;
-if (document.body.offsetWidth <= 960) {
-  menu_overlay_offset = 135;
-}
 document.getElementById('menu-overlay-1').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-1');
   
