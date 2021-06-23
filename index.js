@@ -239,7 +239,6 @@ document.getElementById('btn-menu-close').addEventListener('click', function () 
 
 /* 메뉴 Overlay,Right 전환 */
 document.getElementById('btn-menu-right').addEventListener('click', function () {
-  var curpoint = document.documentElement.scrollTop;
 
   document.getElementById('btn-menu').style.display = 'none';
   document.getElementById('btn-menu-close').style.display = 'none';
