@@ -214,7 +214,7 @@ document.getElementById('btn-menu-right').addEventListener('click', function () 
   document.getElementById('btn-menu-close').style.display = 'none';
   document.getElementById('menu-right').style.display = 'flex';
 
-  setOverlay;
+  setOverlay();
   
 })
 
