@@ -505,6 +505,12 @@ gsap.from('#btn-scrollTop', {
   y: 100,
   opacity: 0
 })
+
+document.getElementById('btn-scrollTop').addEventListener('click', function () {
+  window.scrollTo({
+    top: 0
+  })
+})
 /* ScrollTop Button */
 
 /* contact email send */
