@@ -30,7 +30,7 @@ gsap.to('#header', {
 /* 헤더 배경색 */
 
 /* 헤더 오버레이 효과 */
-var section1height = document.getElementById('section-1').getBoundingClientRect().height -78;
+var section1height = document.getElementById('section-1').getBoundingClientRect();
 var section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height -78;
 var section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height -78;
 var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height -78;
