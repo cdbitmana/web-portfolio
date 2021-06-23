@@ -31,7 +31,7 @@ gsap.to('#header', {
 
 /* 헤더 오버레이 효과 */
 
-var section1height = document.getElementById('section-1').getBoundingClientRect().height -100;
+var section1height = document.getElementById('section-1').getBoundingClientRect().height -50;
 var section2height = section1height + document.getElementById('section-2').getBoundingClientRect().height;
 var section3height = section2height + document.getElementById('section-3').getBoundingClientRect().height;
 var section4height = section3height + document.getElementById('section-4').getBoundingClientRect().height;
@@ -82,7 +82,7 @@ function setOverlay () {
 /* 헤더 오버레이 효과 */
 
 /* 헤더 Right 네비게이션 */
-var menu_overlay_offset = 78;
+var menu_overlay_offset = 50;
 document.getElementById('menu-overlay-1').addEventListener('click', function () {
   var scrollPoint = document.getElementById('section-1');
   
