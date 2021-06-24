@@ -180,7 +180,7 @@ gsap.from('#section-3 .container .card-section', {
   scrollTrigger: {
     trigger: "#section-3 .container .card-section",
     //markers: true,
-    start: "top 100%-=100",
+    start: "top-=100 100%-=150",
     end: "bottom 100%-=200",
     //scrub: true
     toggleActions: "play none none reverse"
