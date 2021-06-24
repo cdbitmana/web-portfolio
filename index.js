@@ -193,7 +193,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
   trigger: "#section-4 .portfolio-box-2",
   //markers: true,
-  start: "top+=200 100%-=170",
+  start: "top-=50 100%-=170",
   end: "bottom-=200 100%-=170",
   //scrub: true
   toggleActions: "play none none reverse"
