@@ -270,7 +270,7 @@ ul, li {
 }
 
 .title {
-  font-size: 45px;
+  font-size: 40px;
   font-family: 'Nunito', sans-serif;
   position: relative;
 }
@@ -1819,8 +1819,8 @@ footer .container > div > div > div:nth-child(2) i {
   margin-bottom: 100px;
 }
 
-.popup .popup-content .popup-title {
-  margin-bottom: 80px;
+.popup .popup-content .popup-sum > .popup-title .title {
+  font-size: 50px;
 }
 
 .popup .popup-content .subtitle {
