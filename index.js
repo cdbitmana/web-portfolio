@@ -175,32 +175,42 @@ document.getElementById('btn-mouse').addEventListener('click', function () {
 })
 /* section-1 btn-mouse */
 
-/* GSAP ScrollTrigger (스크롤로 특정 태그 위치로 이동 시 요소 나타나게 하기) 
-
-
-gsap.from('.section-2 > div > .box-1', {
+/* GSAP ScrollTrigger (스크롤로 특정 태그 위치로 이동 시 요소 나타나게 하기) */
+gsap.from('#section-3 .container .card-section', {
   scrollTrigger: {
-    trigger: ".section-2",
-    // markers: true,
-    start: "top 100%-=200",
-    end: "bottom 100%-=300",
-    scrub: true
+    trigger: "#section-3 .container .card-section",
+    //markers: true,
+    start: "top 100%-=100",
+    end: "bottom 100%-=200",
+    //scrub: true
+    toggleActions: "play none none reverse"
   },
-  x: -500,
+  y: 100,
   opacity: 0
 });
 
-gsap.from('.section-2 > div > .box-2', {
+const tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section-2",
-    // markers: true,
-    start: "top 100%-=200",
-    end: "bottom 100%-=300",
-    scrub: true
-  },
-  x: 500,
-  opacity: 0
+  trigger: "#section-4 .portfolio-box-2",
+  //markers: true,
+  start: "top+=200 100%-=170",
+  end: "bottom-=200 100%-=170",
+  //scrub: true
+  toggleActions: "play none none reverse"
+  }
 });
+
+tl.from('#section-4 .portfolio-box-2 div:nth-child(1)', {
+  y: 100,
+  opacity: 0
+}).from('#section-4 .portfolio-box-2 div:nth-child(2)', {
+  y: 100,
+  opacity: 0
+}).from('#section-4 .portfolio-box-2 div:nth-child(3)', {
+  y: 100,
+  opacity: 0
+})
+
 /* GSAP ScrollTrigger (스크롤로 특정 태그 위치로 이동 시 요소 나타나게 하기) */
 
 /* 메뉴 버튼 */
@@ -257,7 +267,6 @@ document.getElementById('btn-menu').addEventListener('click', function () {
     opacity: 0,
     duration: 1,
   })
-
 })
 
 document.getElementById('btn-menu-close').addEventListener('click', function () {
@@ -297,7 +306,6 @@ document.getElementById('move-01').addEventListener('click', function () {
     window.scrollTo({
       top: scrollPoint
     })
-
   }, 1000)
 
   // 메뉴 닫기 이펙트 연출 (1초 동안)
@@ -325,7 +333,6 @@ document.getElementById('move-02').addEventListener('click', function () {
     window.scrollTo({
       top: scrollPoint
     })
-    
   }, 1000)
 
   // 메뉴 닫기 이펙트 연출 (1초 동안)
@@ -353,8 +360,6 @@ document.getElementById('move-03').addEventListener('click', function () {
     window.scrollTo({
       top: scrollPoint
     })
-    
-
   }, 1000)
 
   // 메뉴 닫기 이펙트 연출 (1초 동안)
@@ -382,7 +387,6 @@ document.getElementById('move-04').addEventListener('click', function () {
     window.scrollTo({
       top: scrollPoint
     })
-    
   }, 1000)
 
   // 메뉴 닫기 이펙트 연출 (1초 동안)
@@ -410,8 +414,6 @@ document.getElementById('move-05').addEventListener('click', function () {
     window.scrollTo({
       top: scrollPoint
     })
-    
-
   }, 1000)
 
   // 메뉴 닫기 이펙트 연출 (1초 동안)
